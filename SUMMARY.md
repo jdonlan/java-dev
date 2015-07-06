@@ -6,4 +6,5 @@
    * Methods & Functions
    * Scope
    * Conditional Statements
+   * Loops
 
