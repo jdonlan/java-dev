@@ -7,4 +7,5 @@
    * Scope
    * Conditional Statements
    * Loops
+   * Final & Static
 
