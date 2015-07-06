@@ -1,7 +1,7 @@
 Developing for Android - Developer's Guide
 =======
 
-Welcome to Developing for Android!  This material was curated and created as a resource for developers to dive into mobile development.  Through this seminar, you will be exposed to the core tools, concepts, and techniques required to build applications for Google's Android operating system. 
+Welcome to Developing for Android!  This material was curated and created as a resource for developers to dive into mobile development.  Through this book, you will be exposed to the core tools, concepts, and techniques required to build applications for Google's Android operating system. 
 
 ## Content and Expectations
 
