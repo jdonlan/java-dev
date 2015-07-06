@@ -12,4 +12,5 @@
    * Objects & Classes
    * Comperators
    * HashSet & HashMap
+   * Generics
 
