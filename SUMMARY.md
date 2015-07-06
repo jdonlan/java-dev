@@ -19,7 +19,7 @@
    * Android Manifest
    * Permissions Overview
    * Activities
-* XML Resources
+* [XML Resources](getting_started_with_android_studio.md/xml_resources.md)
 * Basic UI Components
 * Android User Interface
    * UI Components Continued
