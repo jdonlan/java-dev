@@ -21,4 +21,5 @@
    * Activities
    * XML Resources
    * Basic UI Components
+   * Events & Callbacks
 
