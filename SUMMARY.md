@@ -20,4 +20,5 @@
    * Permissions Overview
    * Activities
    * XML Resources
+   * Basic UI Components
 
