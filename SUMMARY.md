@@ -13,7 +13,7 @@
    * Comperators
    * HashSet & HashMap
    * Generics
-* Getting Started with Android
+* [Getting Started with Android](getting_started_with_android.md)
    * Creating a Project with Android Studio
    * Organization
    * Android Manifest
