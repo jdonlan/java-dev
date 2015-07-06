@@ -18,4 +18,5 @@
    * Organization
    * Android Manifest
    * Permissions Overview
+   * Activities
 
