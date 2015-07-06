@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Java Language](java_language/java_language.md)
-   * Data Types
+   * [Data Types](data_types.md)
    * Methods & Functions
    * Scope
    * Conditional Statements
