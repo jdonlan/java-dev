@@ -21,7 +21,7 @@
    * Activities
    * XML Resources
 * Android User Interface
+   * Events & Callbacks
    * Basic UI Components
    * UI Components Continued
-* Events & Callbacks
 
