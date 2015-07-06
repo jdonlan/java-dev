@@ -19,7 +19,7 @@
    * Android Manifest
    * Permissions Overview
    * Activities
-   * XML Resources
+* XML Resources
 * Android User Interface
 * Basic UI Components
 * Events & Callbacks
