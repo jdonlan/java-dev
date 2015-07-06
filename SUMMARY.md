@@ -19,4 +19,5 @@
    * Android Manifest
    * Permissions Overview
    * Activities
+   * XML Resources
 
