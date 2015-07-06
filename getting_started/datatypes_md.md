@@ -20,3 +20,4 @@ A character in Java is any single Unicode value. This usually ends up being an a
 An integer in Java is any whole number value between  negative 2<sup>31</sup> and 2<sup>31</sup>-1, including zero. Integers cannot hold decimal values. If you try to set an integer to be a decimal value then it will be truncated or rounded down. An integer is declared in Java using the int keyword followed by a whole number value. To call methods on an integer value, use the Integer companion class.
 
 ```int wholeNumber = 32000;```
+
