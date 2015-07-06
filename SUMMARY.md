@@ -17,4 +17,5 @@
    * Creating a Project with Android Studio
    * Organization
    * Android Manifest
+   * Permissions Overview
 
