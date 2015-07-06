@@ -20,7 +20,7 @@
    * Permissions Overview
    * Activities
    * XML Resources
+* Android User Interface
 * Basic UI Components
 * Events & Callbacks
-* Android User Interface
 
