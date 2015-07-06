@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Java Language](java_language.md)
+* [Java Language](javalanguage_md.md)
    * Data Types
    * Methods & Functions
    * Scope
