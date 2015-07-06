@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* [Java Recap](chapter1.md)
+* [Java Language](chapter1.md)
 
