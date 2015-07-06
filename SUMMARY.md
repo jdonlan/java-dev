@@ -4,4 +4,5 @@
 * [Java Language](chapter1.md)
    * Data Types
    * Methods & Functions
+   * Scope
 
