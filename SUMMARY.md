@@ -20,7 +20,7 @@
    * Permissions Overview
    * Activities
    * XML Resources
-* [Android User Interface](android_user_interface.md)
+* [Android User Interface](android_ui/androiduser_interface.md)
    * Basic UI Components
    * Events & Callbacks
    * UI Components Continued
