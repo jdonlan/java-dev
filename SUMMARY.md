@@ -16,4 +16,5 @@
 * Getting Started with Android
    * Creating a Project with Android Studio
    * Organization
+   * Android Manifest
 
