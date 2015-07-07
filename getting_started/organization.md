@@ -48,7 +48,11 @@ Another way to import classes is to import the entire package. Let's say you nee
 import com.company.android.myapplication.fragments.*;
 ```
 
+Notice that instead of a class name at the end of the import, there is an asterisk instead. This tells the compiler to import all classes in the "com.company.android.myapplication.fragments" package for use in the MainActivity class.
 
+You can also find more example imports at the top of your MainActivity class when creating a new project.
 
-
+####References
+[http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html](http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html)
+[http://developer.android.com/guide/topics/manifest/manifest-element.html#package](http://developer.android.com/guide/topics/manifest/manifest-element.html#package)
 
