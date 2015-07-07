@@ -56,3 +56,8 @@ public class Employee {
 	}
 }
 ```
+
+Since the Employee class holds all of our employee data, we can now pass around a single Employee object instead of passing around multiple variables when dealing with employee data. This makes our code more readable and adheres to the object-oriented principles of the Java language. If a set of data is related and has common functions that it can perform, make it into a class. The data becomes the member variables and the functions become the class methods.
+
+NOTE: *When creating a new class, you would create a new .java file. The .java file must be named exactly the same as the name of the class or the class won't compile. As per the Java naming conventions, all class names should begin with a capital letter and should be named to be descriptive of the class contents.*
+
