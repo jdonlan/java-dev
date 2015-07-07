@@ -10,7 +10,7 @@
    * [Final](java_language/final_&_static.md)
    * [Static](java_language/static.md)
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
-   * Objects & Classes
+   * [Objects & Classes](java_language/objects_&_classes.md)
    * Comperators
    * HashSet & HashMap
    * Generics
