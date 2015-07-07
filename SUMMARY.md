@@ -20,6 +20,7 @@
    * [Android Manifest](getting_started/android_manifest.md)
    * [Activities](getting_started/activities.md)
    * XML Resources
+   * Resources
 * [Android User Interface](android_ui/androiduser_interface.md)
    * Basic UI Components
    * Events & Callbacks
