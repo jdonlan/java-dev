@@ -26,3 +26,17 @@ This concept of inheritance is much easier to understand if you think of it as a
 Child classes can access class members of their parents by using the super keyword. This can be used within a subclass to call methods or access class data from the super class. For instance, if you override onCreate() in an Activity, you still need to call the super class onCreate() method so that the system can do all the necessary setup. To call this method, you could call super.onCreate().
 
 In addition to inheriting all of the non-private methods and member variables from the super class, subclasses can also override methods in the super class, creating custom or extended functionality based on the original.
+
+###Example
+```
+// MainActivity is a subclass of Activity as denoted by the extends keyword.
+public class MainActivity extends Activity {
+	@Override
+	protected void onCreate(Bundle _savedInstanceState) {
+		// Calling a superclass method using the super keyword.
+		super.onCreate(_savedInstanceState);
+	}
+}
+```
+
+As a reminder, it should be noted that final methods of a superclass cannot be overridden by a subclass.
