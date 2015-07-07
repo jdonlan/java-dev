@@ -15,3 +15,5 @@ One of the most under or improperly-utilized features of development environment
 
 A developer may have a workspace, for example, dedicated to Android (mobile) projects and another dedicated to Android Wear or Android TV projects. Another usage for workspaces would be for a developer to separate side projects and those they are working on for their employer. One thing is certain - each project should have its own project folder in an appropriate workspace.
 
+####References
+[https://developer.android.com/sdk/index.html](https://developer.android.com/sdk/index.html)
