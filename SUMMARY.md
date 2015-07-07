@@ -11,7 +11,7 @@
    * [Static](java_language/static.md)
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
    * [Objects & Classes](java_language/objects_&_classes.md)
-   * Comperators
+   * [Comperators](java_language/comperators.md)
    * HashSet & HashMap
    * Generics
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
