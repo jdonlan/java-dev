@@ -9,6 +9,7 @@
    * [Loops](java_language/loops.md)
    * [Final](java_language/final_&_static.md)
    * Object Oriented Programming
+       * Static
    * Objects & Classes
    * Comperators
    * HashSet & HashMap
