@@ -8,7 +8,7 @@
    * [Conditional Statements](java_language/conditional_statements.md)
    * [Loops](java_language/loops.md)
    * [Final](java_language/final_&_static.md)
-   * Static
+   * [Static](java_language/static.md)
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
        * Static
    * Objects & Classes
