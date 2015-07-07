@@ -46,3 +46,16 @@ for(myValue : myArray){
 }
 ```
 
+In the above code example, myValue represents an individual object from myArray. As the loop runs, the code will pull a new value from myArray to and store it in myValue. Like the example For Loop, the For Each will execute 5 times, once for each value in the array.
+
+##While Loop
+Unlike the For or For Each loops, the While loop is utilized for running a block of code based solely on a condition. While loops are often the best choice when looking for specific values in a data collection or waiting for a specific condition to be met within an application before continuing code execution. For example, if you were building a Blackjack application, and you wanted the dealer AI to hit under 16, a simple While loop could achieve this goal:
+
+```
+while (dealerTotal < 16){
+    Card newCard = deck.deal();
+    dealerTotal += newCard.value;
+}
+```
+
+In the above example, the application first evaluates the dealerTotal and compares it to provided value of 16. If the total is less than 16, the encapsulated code executes, getting a new card from the deck.deal() method, adds the value of that card to the dealerTotal and returns to the beginning of the loop. The loop will then re-evaluate the dealerTotal and compare it to the requisite value of 16. If it still falls short, the loop will execute again, if it is at or above 16, however, the loop will cease and the remainder of the application will continue executing.
