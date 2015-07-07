@@ -18,7 +18,6 @@
    * [Creating a Project with Android Studio](getting_started/creating_a_project_with_android_studio.md)
    * [Organization](getting_started/organization.md)
    * [Android Manifest](getting_started/android_manifest.md)
-   * Permissions Overview
    * [Activities](getting_started/activities.md)
    * XML Resources
 * [Android User Interface](android_ui/androiduser_interface.md)
