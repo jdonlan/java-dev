@@ -16,7 +16,7 @@
    * [Generics](java_language/generics.md)
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * [Creating a Project with Android Studio](getting_started/creating_a_project_with_android_studio.md)
-   * Organization
+   * [Organization](getting_started/organization.md)
    * Android Manifest
    * Permissions Overview
    * Activities
