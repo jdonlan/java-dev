@@ -59,3 +59,7 @@ while (dealerTotal < 16){
 ```
 
 In the above example, the application first evaluates the dealerTotal and compares it to provided value of 16. If the total is less than 16, the encapsulated code executes, getting a new card from the deck.deal() method, adds the value of that card to the dealerTotal and returns to the beginning of the loop. The loop will then re-evaluate the dealerTotal and compare it to the requisite value of 16. If it still falls short, the loop will execute again, if it is at or above 16, however, the loop will cease and the remainder of the application will continue executing.
+
+##Do While Loop
+The Do While Loop is a variant of the While loop that functions in much the same way with one primary difference - in the While loop, the condition is run prior to the execution of the encapsulated code; in a Do While loop, however, the encapsulated code is run prior to the condition. Looking back at the example above, the players in Blackjack always need to be dealt 2 cards initially. As such, a Do While loop can be used to deal the initial cards:
+
