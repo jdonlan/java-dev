@@ -52,4 +52,4 @@ A byte is a very small integer value between -128 and 127. The byte data type is
 ```byte verySmallNumber = 1;```
 
 ####References
-For more information about primitive data types, see the Java developer references at [http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
+For more information about primitive data types, see the Java developer references at  [http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
