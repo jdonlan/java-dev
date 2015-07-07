@@ -1,6 +1,6 @@
-##Methods and Functions
+#Methods and Functions
 In any well-designed code base you'll notice several named blocks of code which seem to be attached to actions or commands. These named blocks of code are known as methods. Methods are named blocks of code that belong to a class that can be called to execute the code contained within. Let's first take a look at how to declare a method.
-###Method Signatures
+##Method Signatures
 
 As seen below, there are four components to a method declaration in Java: access level, return type, method name, and parameters. Together, these four components form what's known as a method signature. The access level component is covered in the next chapter, so we'll focus on the other components here.
 
@@ -27,7 +27,7 @@ A method name is the name by which the method will be invoked in code. Like vari
 ####Parameters
 Parameters are any data that you want to pass into a method to be used during execution. These parameters are declared as variables in parentheses after the method name. If you need to pass in multiple parameters, they should each be separated by a comma. Alternatively, you can also choose to pass in no parameters which you would do by leaving the parentheses empty.
 
-###Constructors
+##Constructors
 There is a special type of method used in the Java language known as a constructor. Constructors are used to create a new instance of the containing object using the new keyword. Additionally, constructors should be used to initialize any member variables in their class. Constructors are a little different from regular methods in that they don't have a return type and they must always be named the same as the containing class. By default, every class has what's known as a default constructor. Default constructors are a constructor that takes in no parameters. If you don't need to do anything special in your constructor, then you can just not write one at all and the system will use the built-in default constructor when creating new instances of that class.
 
 ```
@@ -45,7 +45,7 @@ public class Student {
 ```
 Note* in the above example there are two occurances of public Student().  This is called method overloading, as explained below.
 
-###Calling Methods
+##Calling Methods
 Once your method has been declared, you're ready to start calling those methods. The first thing you need to do is get a new instance of the class that contains the methods you want to call. You can do this by using the new keyword and the class's constructor as seen below. Once you have your class instance, or object, you can call your methods using the name of the object, followed by a dot, followed by the name of the method and any parameters.
 
 
@@ -57,7 +57,7 @@ Student student = new Student("Mary Thompson");
 student.setId(42);
 ```
 
-###Overloading Methods
+##Overloading Methods
 In the constructor example above, there were two constructors with the same name, but they had different parameters. This contradicts the rule that all method names need to be unique. When two or more methods have the same name, same access level, and same return type but different parameters, this is known as method overloading. Overloaded methods should perform the same functionality as other methods with the same name, just using different parameters. Method overloading is useful when you want to have some parameters that are optional. Java doesn't support optional parameters though so instead you would need to write a method overload for each set of parameters you wanted to include. This could lead to having several methods that do the same thing which would require a lot of code. However, you can take a shortcut here by making the overloaded methods call each other as shown below.
 
 ```
