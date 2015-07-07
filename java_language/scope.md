@@ -15,6 +15,7 @@ Parameter level variables are the variables declared within the parentheses at t
 ###Local Variables
 Local variables are any variable that is declared inside of a method or other block of code. Local variables only exist within the block of code they were created and within any child blocks of that block. For instance, if a variable is declared inside of a method, it exists for the life of the method. However, if you have an if statement inside that method and you declare a variable inside of that if statement, then that variable will fall out of scope at the end of the if statement instead of the end of the method. An example of this and other variable types can be seen below.
 
+###Example
 ```
 public class ScopeExample {
 	static final String STATIC_VARIABLE = "static variable";
