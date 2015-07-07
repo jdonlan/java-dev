@@ -19,7 +19,7 @@
    * [Organization](getting_started/organization.md)
    * [Android Manifest](getting_started/android_manifest.md)
    * [Activities](getting_started/activities.md)
-   * Resources
+   * [Resources](getting_started/resources.md)
    * XML Resources
 * [Android User Interface](android_ui/androiduser_interface.md)
    * Basic UI Components
