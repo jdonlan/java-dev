@@ -63,3 +63,24 @@ In the above example, the application first evaluates the dealerTotal and compar
 ##Do While Loop
 The Do While Loop is a variant of the While loop that functions in much the same way with one primary difference - in the While loop, the condition is run prior to the execution of the encapsulated code; in a Do While loop, however, the encapsulated code is run prior to the condition. Looking back at the example above, the players in Blackjack always need to be dealt 2 cards initially. As such, a Do While loop can be used to deal the initial cards:
 
+```
+int playerTotal = 0;
+int dealerTotal = 0;
+int cardsDealt = 0;
+do {
+    Card newCard = deck.deal();
+    playerTotal += newCard.value;
+    newCard = deck.deal();
+    dealerTotal += newCard.value;
+    cardsDealt++;
+} while (cardsDealt < 2);
+```
+
+In the above code block, cardsDealt is initialized and set to 0 before the first execution of the loop. The loop is then entered with the encapsulated code run. At the end of the code block, cardsDealt is incremented by 1 with cardsDealt++. 
+
+At this point, the loop evaluates the condition and determines cardsDealt is less than 2, returning to the top of the loop and running the code block again. Once again, the cardsDealt value is incremented at the end and the condition is re-evaluated.
+
+This time, the application determines that cardsDealt is no longer less than 2, as it is equal to 2, and ceases the loop, allowing the remaining application code to proceed.
+
+####References
+[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
