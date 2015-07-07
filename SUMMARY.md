@@ -12,7 +12,7 @@
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
    * [Objects & Classes](java_language/objects_&_classes.md)
    * [Comperators](java_language/comperators.md)
-   * [Collections](java_language/collections.md)
+   * [Collections](java_language/collectionsmd.md)
    * Generics
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * Creating a Project with Android Studio
