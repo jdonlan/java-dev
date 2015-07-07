@@ -7,7 +7,7 @@
    * [Scope](java_language/scope.md)
    * [Conditional Statements](java_language/conditional_statements.md)
    * [Loops](java_language/loops.md)
-   * Final & Static
+   * [Final & Static](java_language/final_&_static.md)
    * Object Oriented Programming
    * Objects & Classes
    * Comperators
