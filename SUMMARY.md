@@ -13,7 +13,7 @@
    * [Objects & Classes](java_language/objects_&_classes.md)
    * [Comperators](java_language/comperators.md)
    * [Collections](java_language/collections.md)
-   * Generics
+   * [Generics](java_language/generics.md)
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * Creating a Project with Android Studio
    * Organization
