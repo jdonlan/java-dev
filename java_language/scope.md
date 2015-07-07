@@ -79,3 +79,6 @@ public class AccessLevelExample {
 	}
 }
 ```
+
+####References
+For more information on scoping and acess levels for Java development, please refer to the Java developer documentation at [http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html](http://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html)
