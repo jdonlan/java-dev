@@ -4,7 +4,7 @@
 * [Java Language](java_language/java_language.md)
    * [Data Types](getting_started/datatypes_md.md)
    * [Methods & Functions](java_language/methods_&_functions.md)
-   * Scope
+   * [Scope](java_language/scope.md)
    * Conditional Statements
    * Loops
    * Final & Static
