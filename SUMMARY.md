@@ -5,7 +5,7 @@
    * [Data Types](getting_started/datatypes_md.md)
    * [Methods & Functions](java_language/methods_&_functions.md)
    * [Scope](java_language/scope.md)
-   * Conditional Statements
+   * [Conditional Statements](java_language/conditional_statements.md)
    * Loops
    * Final & Static
    * Object Oriented Programming
