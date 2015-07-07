@@ -50,3 +50,6 @@ A double is a double-precision floating point, or decimal, number. Much like the
 A byte is a very small integer value between -128 and 127. The byte data type is used to represent the same values of a single byte of memory and is commonly used in file and network operations when reading and writing data. To declare a byte in Java, use the byte keyword followed by a whole number value. To call methods on a byte, use the [Byte](http://developer.android.com/reference/java/lang/Byte.html) companion class.
 
 ```byte verySmallNumber = 1;```
+
+####References
+For more information about primitive data types, see the Java developer references at [http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html](http://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
