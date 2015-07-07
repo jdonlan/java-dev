@@ -6,7 +6,7 @@
    * [Methods & Functions](java_language/methods_&_functions.md)
    * [Scope](java_language/scope.md)
    * [Conditional Statements](java_language/conditional_statements.md)
-   * Loops
+   * [Loops](java_language/loops.md)
    * Final & Static
    * Object Oriented Programming
    * Objects & Classes
