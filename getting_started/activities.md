@@ -53,6 +53,9 @@ The onPause() method is the second most important lifecycle callback method. Thi
 ##onStop()
 The onStop() method is called whenever the containing activity is no longer visible to the end user. Typical reasons for no longer being visible include launching a new activity that covers the whole screen, switching apps to bring forward a old activity, or closing the containing app. At this point, the system can decide whether or not to destroy this activity to free up system resources. If the activity restarts without being destroyed, the onRestart() callback will be called. The onRestart() callback isn't covered here since it's hardly ever used and is immediately followed by onStart(), but you can find out more about onRestart() in the Android Developer guide. If the activity doesn't restart and instead it closes completely due to the app being closed or the system freeing up resources, onDestroy() is called.
 
+##onDestroy()
+The onDestroy() method is called whenever your activity is being destroyed. This is the last method callback you receive before the containing activity no longer exists. At this point, you should make sure any remaining resources are cleaned up and all data connections are completely closed as to not cause a crash on exit.
+
 
 
 
