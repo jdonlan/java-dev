@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Java Language](java_language/java_language.md)
    * [Data Types](getting_started/datatypes_md.md)
-   * Methods & Functions
+   * [Methods & Functions](java_language/methods_&_functions.md)
    * Scope
    * Conditional Statements
    * Loops
