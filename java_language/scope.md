@@ -1,2 +1,2 @@
 #Scope and Access Levels
-The life span of a variable depends on where and how it was declared. Likewise, the accessibility of variables and methods depends on the access level with which they're declared. In this chapter, we'll talk about the life span, or scope, of variables along with the different access types with which they're defined.
+The life span of a variable depends on where and how it was declared. Likewise, the accessibility of variables and methods depends on the access level with which they're declared. In this section , we'll talk about the life span, or scope, of variables along with the different access types with which they're defined.
