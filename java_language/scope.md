@@ -43,3 +43,39 @@ public ScopeExample(int _parameter) { // Start of method
 } // parameter falls out of scope
 ```
 
+##Access Levels
+In a typical project, code is spread out across several packages, classes, and methods. However, how each of these code modules interacts with each other is entirely dependent on the access levels of different classes, methods, and variables. Access levels are a way to set permissions for which parts of your code can interact with other parts. For instance, your class might define a variable that only that class should alter. If other classes want to access this variable, then they'll need to call a method you defined to securely access it. With access levels, it's entirely possible to make this interaction happen.
+
+The Java language defines four different access levels that allow you to encapsulate, or hide, certain pieces of your code from other parts of your application. Those levels are public, protected, private, and package-private.
+
+###Public
+Classes, variables, and methods that are declared using the public keyword are accessible from all other portions of your code. Aside from the restrictions between static and non-static methods and variables, there are no restrictions on access for items that are public.
+
+###Private
+Variables and methods that are declared using the private keyword are only accessible from within the containing class. So if you declare a method in your class to be private, then only other methods within that class are able to call that private method. This works the same for any member variables that are declared as private. It's common practice to make your member variables private so that other classes can't directly alter them. If other classes do need to alter them, instead of making them public, you should provide getter and setter methods that retrieve and alter your member variables in a controlled manner. For instance, if you have an integer member variable that always needs to be greater than one, if you make it public then any other class could accidentally set it to zero which would then break your code. By making it private and providing a setter method, you can check the value passed into that method before setting your variable to a potentially harmful value.
+
+###Protected
+Variables and methods that are declared using the protected keyword are very similar to those that are marked as private. The only difference here being that private members can only be accessed inside the declaring class. However, protected members can be accessed from within the class, any subclasses of that class, and within other classes in the same package. You can mostly ignore this type for now, but we'll come back to it when we talk about inheritance in later weeks.
+
+###Package-Private
+Variables and methods that are declared using none of the above keywords, are known as package-private. Package-private members are accessible in a similar fashion to protected members but with a slight change. Package-private members are accessible from within the declaring class and within classes in the same package, but not within subclasses. The exception there being that subclasses can access package-private members so long as they too are within the same package. This means that if you declare a method in your class that doesn't have a modifier in your ".util" package, then only other classes within your ".util" package can access that method.
+
+###Example
+```
+public class AccessLevelExample {
+
+	// Package-private declaration (no-modifier)
+	static final String STATIC_VARIABLE = "static variable";
+	
+	// Private variable declaration
+	private int mMemberVariable;
+	
+	// Public constructor declaration
+	public AccessLevelExample() {
+	}
+	
+	// Protected Method declaration
+	protected void doWork() {
+	}
+}
+```
