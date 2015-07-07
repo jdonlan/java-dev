@@ -19,4 +19,4 @@ if(i < 5) {
 
 As you can see in the above code, the "if" and "else if" statements require some form of boolean value or condition to be specified inside the parentheses. However, the "else" part of the statement requires no condition at all since it'll execute so long as the above "if/else if" conditions aren't being met. 
 
-It's important to note that this type of conditional must always start with an "if" condition followed by any number of optional "else if" conditions, and an optional "else" statement. It's also important to note that as soon as one of the conditions are met, none of the remaining "else if" or "else" statements will be checked. For more about the boolean conditions used for if statements, read the section of the course textbook listed in the resources section of this lesson.
+It's important to note that this type of conditional must always start with an "if" condition followed by any number of optional "else if" conditions, and an optional "else" statement. It's also important to note that as soon as one of the conditions are met, none of the remaining "else if" or "else" statements will be checked.
