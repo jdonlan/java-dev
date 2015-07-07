@@ -56,8 +56,8 @@ The onStop() method is called whenever the containing activity is no longer visi
 ##onDestroy()
 The onDestroy() method is called whenever your activity is being destroyed. This is the last method callback you receive before the containing activity no longer exists. At this point, you should make sure any remaining resources are cleaned up and all data connections are completely closed as to not cause a crash on exit.
 
-
-
-
-
+####References
+[http://developer.android.com/reference/android/app/Activity.html](http://developer.android.com/reference/android/app/Activity.html)
+[http://developer.android.com/guide/components/activities.html](http://developer.android.com/guide/components/activities.html)
+[http://developer.android.com/training/basics/activity-lifecycle/index.html](http://developer.android.com/training/basics/activity-lifecycle/index.html)
 
