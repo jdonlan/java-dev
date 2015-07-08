@@ -1,4 +1,4 @@
-#ListView
+#Advanced Views - ListView
 
 A very common UI pattern for displaying a group of related data is to show that data in a vertically scrolling list. To achieve this type of list display, you would use a ListView. The Android ListView is a special type of view group known as an AdapterView. Unlike other view groups where the views contained within are all determined via a layout file, such is the case with LinearLayout, an AdapterView creates its views on the fly based off the data contained within an adapter.
 
