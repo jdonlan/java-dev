@@ -21,8 +21,4 @@
    * [Activities](getting_started/activities.md)
    * [Resources](getting_started/resources.md)
    * [XML Resources](getting_started/xml_resources.md)
-* [Android User Interface](android_ui/androiduser_interface.md)
-   * Events & Callbacks
-   * UI Components Continued
-   * Basic Views
 
