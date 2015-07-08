@@ -16,4 +16,4 @@ While the material is intended to be mostly comprehensive, certain areas of the 
 
 Throughout the book, you will be provided with challenges that require the synthesis and application of the presented material.  In many instances, successful completion of the challenges will require you to progress into suggested research as self-study.  
 
-Assignments should be completed in a private Git repository such as GitHub or BitBucket showing regular commits and progression.  
+Assignments should be completed in a private Git repository such as GitHub or BitBucket showing regular commits and progression to reflect industry best practices.  
