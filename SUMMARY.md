@@ -22,7 +22,6 @@
    * [Resources](getting_started/resources.md)
    * [XML Resources](getting_started/xml_resources.md)
 * [Android User Interface](android_ui/androiduser_interface.md)
-   * Basic UI Components
    * Events & Callbacks
    * UI Components Continued
 
