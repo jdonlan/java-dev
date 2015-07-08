@@ -21,5 +21,5 @@
    * [Activities](getting_started/activities.md)
    * [Resources](getting_started/resources.md)
    * [XML Resources](getting_started/xml_resources.md)
-* Android UI
+* [Android UI](android_ui.md)
 
