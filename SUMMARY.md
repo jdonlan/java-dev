@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Interfaces
 * [Java Language](java_language/java_language.md)
    * [Data Types](java_language/datatypes.md)
    * [Methods & Functions](java_language/methods_&_functions.md)
@@ -10,6 +9,7 @@
    * [Loops](java_language/loops.md)
    * [Final](java_language/final_&_static.md)
    * [Static](java_language/static.md)
+   * Interfaces
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
    * [Objects & Classes](java_language/objects_&_classes.md)
    * [Comperators](java_language/comperators.md)
