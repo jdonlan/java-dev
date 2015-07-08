@@ -22,4 +22,5 @@
    * [Resources](getting_started/resources.md)
    * [XML Resources](getting_started/xml_resources.md)
 * [Android UI](android_ui.md)
+   * Basic Views
 
