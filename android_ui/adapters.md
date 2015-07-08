@@ -126,4 +126,45 @@ A SimpleAdapter is, as the name implies, very simple to use. However SimpleAdapt
 
 To use a SimpleAdapter, you must first convert each object into a HashMap&lt;String, String&gt;. This means mapping each point of data in your object to a string key that can represent it. After converting your objects into HashMaps, you would then add all of those HashMaps into an ArrayList&lt;HashMap&lt;String, String&gt;&gt;. Then you would need to create a string array of all your keys and an integer array of all of the view IDs where the data should be shown. Then you pass all of that data, including the list/grid item layout into the adapter constructor. Once you've done that, everything should just work. Behind the scenes, the getView() method is using the string array to pull data from the passed in HashMaps. Then getView() assigns that data from the HashMap to the TextView specified in the integer array.
 
+```
+private ListView mListView;
+private ArrayList<Employee> mEmployees;
+...
+// Members initialized
+...
+private void setSimpleAdapter() {
+	// Field identifiers
+	final String name = "name";
+	final String department = "department";
+	final String years = "years";
+	// List of elements for our adapter.
+	ArrayList<HashMap<String, String>> elements = new ArrayList<HashMap<String,String>>();
+	// Goes through each employee and maps the data elements to a String key.
+	for(Employee employee : mEmployees) {
+		HashMap<String, String> map = new HashMap<String, String>();
+		map.put(name, employee.getName());
+		map.put(department, employee.getDepartment());
+		map.put(years, getString(R.string.years, employee.getYearsOfService()));
+		elements.add(map);
+	}
+	// Creating an array of our keys
+	String[] keys = new String[] {
+		name, department, years	
+	};
+	// Creating an array of our list item components.
+	// Indices must match the keys array.
+	int[] views = new int[] {
+			R.id.employee_name,
+			R.id.employee_department,
+			R.id.employee_service_time
+	};
+	// Creating a new SimpleAdapter that maps values to views using our keys and views arrays.
+	SimpleAdapter adapter = new SimpleAdapter(this, elements, R.layout.example_list_item, keys, views);
+	mListView.setAdapter(adapter);
+}
+```
 
+####References
+http://developer.android.com/reference/android/widget/ArrayAdapter.html
+http://developer.android.com/reference/android/widget/SimpleAdapter.html
+http://developer.android.com/reference/android/widget/BaseAdapter.html
