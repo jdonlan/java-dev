@@ -8,3 +8,15 @@ The GridView control is a type of AdapterView that shows content in a uniform gr
 ##Components
 
 ###GridView XML Resource
+A GridView is defined in XML using the &lt;GridView /&gt; tag and specifying an ID, layout width, and layout height. As with lists, it's typical to have your grid stretch the full width and height of the layout. Additionally, there are a few other properties that you can set here. The numColumns property allows you to set how many columns your grid will contain. You don't set the number of rows since that's determined by the amount of data you have in your backing collection. The horizontalSpacing and verticalSpacing properties will allow you to define how much space you have between each tile in your grid. Likewise, you can set a fixed width for columns using the columnWidth property or you can set how columns stretch to fill any extra spacing using the stretechMode property. The below declaration will create a grid with two columns that are evenly spaced and distributed.
+
+```
+<GridView android:id="@+id/image_grid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:numColumns="2"
+    android:stretchMode="columnWidth" />
+```
+
+###Grid Item Layout
+The grid item layout is the layout file that will determine what your grid items will look like. When creating this layout, it's important to keep the number of columns in your grid in mind. If your grid only has one column, you'll want to specify a wide layout. If your grid has many columns, you'll want to specify a more narrow layout. If you're going for a tile look, you'll want to make your grid items square. It's important to note that the same restrictions apply to grid items as they do to list items (no scrolling containers, keep text light, etc).
