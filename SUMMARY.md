@@ -9,12 +9,12 @@
    * [Loops](java_language/loops.md)
    * [Final](java_language/final_&_static.md)
    * [Static](java_language/static.md)
-   * Interfaces
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
    * [Objects & Classes](java_language/objects_&_classes.md)
    * [Comperators](java_language/comperators.md)
    * [Collections](java_language/collections.md)
    * [Generics](java_language/generics.md)
+* Interfaces
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * [Creating a Project with Android Studio](getting_started/creating_a_project_with_android_studio.md)
    * [Organization](getting_started/organization.md)
