@@ -16,3 +16,24 @@ Android events take on many forms, depending on the platform and device which is
 ##Event Listeners
 Event Listeners attach to views within an application signifying that the application should respond to user interaction. For example, a button within an application must listen for a user to press it so that it knows it needs to respond to said press. As such, the application must attach an *OnClickListener* to the button to do so. These listeners contain a single callback which will be fired when the event is registered with the system. In the case of the *OnClickListener*, for example, the *onClick* callback is triggered, allowing the desired code to run in response.
 
+###Example
+
+Attaching an OnClickListener to a Button myButton
+
+```
+protected void onCreate(Bundle savedInstanceState) {
+        ...
+        Button button = (Button)findViewById(R.id.myButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //CODE
+            }
+        });
+        ...
+}
+```
+
+##Event Handlers
+Event Handlers, like Event Listeners, allow the application to run callback methods in response to system events. These events aren't in response to a view, but typically system interactions that are fired more generically such as those involving system hardware like the GPS or accelerometer, touch events including the keyboard or other non-view UI controls, or application flow such as focus changes, animations, or view loads.
+
