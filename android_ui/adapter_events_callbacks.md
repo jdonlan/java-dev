@@ -1,0 +1,1 @@
+#Adapter Events and Callbacks
