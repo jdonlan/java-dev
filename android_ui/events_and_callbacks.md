@@ -37,3 +37,5 @@ protected void onCreate(Bundle savedInstanceState) {
 ##Event Handlers
 Event Handlers, like Event Listeners, allow the application to run callback methods in response to system events. These events aren't in response to a view, but typically system interactions that are fired more generically such as those involving system hardware like the GPS or accelerometer, touch events including the keyboard or other non-view UI controls, or application flow such as focus changes, animations, or view loads.
 
+####References
+http://developer.android.com/guide/topics/ui/ui-events.html
