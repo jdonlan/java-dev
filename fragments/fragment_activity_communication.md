@@ -52,3 +52,43 @@ Similar to Activities, in the Fragment lifecycle, the Fragment will go through a
 To use setArguments(), you must first define a Bundle to be saved. Remember, a Bundle acts as a key:value store, so you must store data using put() methods such as putInt(key, value). Retrieving data from these Bundles, similarly, uses a get() method such as getAttributes().getInt(key).
 
 Take, for example, the need to relaod text into a TextView upon the Activity being recreated due to an orientation change. First, the Fragment would need to store the text currently being displayed into a Bundle. This is first done on Fragment creation:
+
+```
+public static DisplayFragment newInstance(String text) {
+  DisplayFragment frag = new DisplayFragment();
+		
+  Bundle args = new Bundle();
+  args.putString("display", text);
+  frag.setArguments(args);
+		
+  return frag;
+}
+```
+
+At this point, the Fragment has created and stored a Bundle containing text passed from the Activity that is implementing it through its constructor. The Fragment will now need to manage its Bundle in the event the text changes programmatically. Since the Fragment arguments have already been established, the Fragment will need to access and change its current arguments to accomplish this.
+
+```
+private void setDisplayText(String text){
+  Bundle args = getArguments();
+  if(args != null && args.containsKey(ARG_TEXT)) {
+    args.putString("display",text);
+  }
+  ((TextView) getView().findViewById(R.id.display)).setText(text);
+}
+```
+
+Notice how the same key name display is used to override the data. At this point, the Fragment can handle orientation changes by reloading the data input into the Bundle.
+
+```
+@Override
+public void onActivityCreated(Bundle savedInstanceState) {
+  super.onActivityCreated(savedInstanceState);
+		
+  Bundle args = getArguments();
+  if(args != null && args.containsKey(ARG_TEXT)) {
+    setDisplayText(args.getString(ARG_TEXT));
+  }
+}
+```
+
+Here, as the Activity is created, the Fragment calls an internal method of setDisplayText() (shown above) to update its display with the text content.
