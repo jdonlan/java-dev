@@ -37,5 +37,5 @@
    * [ListFragment](fragments/listfragment.md)
    * [Fragment Activity Communication](fragments/fragment_activity_communication.md)
 * [Networking](networking/networking.md)
-   * Understanding Threads
+   * [Understanding Threads](networking/understanding_threads.md)
 
