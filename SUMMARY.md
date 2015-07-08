@@ -24,5 +24,5 @@
 * [Android UI](android_ui/android_ui.md)
    * [Basic Views](android_ui/basic_views.md)
    * [Basic Layouts](android_ui/basic_layouts.md)
-   * Events and Callbacks
+   * [Events and Callbacks](android_ui/events_and_callbacks.md)
 
