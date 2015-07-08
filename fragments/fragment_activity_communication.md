@@ -1,4 +1,6 @@
 #Fragment Activity Communication
+
+##Communicating through Interfaces
 While interfaces have a wide array of functionality and purpose for many Java applications in multiple platforms and genres, one of the most common uses in Android development is creating communication channels between Fragments and Activities. As the Activity should control the application flow/navigation, operate and execute external threads, and facilitate data transfer between individual components, Fragments should utilize the Actiivty for these tasks. This is done through Java Interfaces.
 
 As Fragments are often used for user-facing components, they typically have their own UI. Behaviors such as click listeners, item selectors, and other UI components are thus handled directly within the Fragment. When these interactions need to communicate with other parts of the application, however, an Interface with the main activity allows the Fragment to communicate with other areas of the application. In order to faciliate this, the Fragment defines the required Interface and the Activity implements the interface. This Interface is often referred to as a Listener, as it enables the Activity to "listen" for events from within the Fragment.
@@ -35,4 +37,9 @@ public class MainActivity extends Activity implements OnSearchListener{
   }
 }
 ```
+
+In the above example, you can see that the interface is defined in the Fragment and then implemented in the Activity. As defined in the Interface, the implemented method is public, returns void, and accepts a String parameter.
+
+###Enforcing the Interface
+It should be noted that in the above example, there is some logic established in the onAttach method for the Fragment. This logic verifies that the Activity that is attempting to use the fragment implements the proper Interface - OnSearchListener in this case. If the Activity did not implement the interface, an exception would be thrown as the functionality and integrity of the application would be compromised. As the Activity did, however, implement the proper Interface, the Activity context is stored in a member reference mListener. This way, the Fragment can refer back to the containing Activity, allowing the Fragment to communicate with the Activity as needed.
 
