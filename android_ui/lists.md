@@ -21,7 +21,7 @@ The last thing to keep in mind with list items is the amount of content shown. I
 ###Data Collection
 At this point, you should be fairly familiar with how collections work so it should somewhat obvious that arrays and lists are the ideal collection types for working with a ListView. The reason for this is that they both store their elements in sequential, unchanging order and they both allow easy access to the contained elements via ordered indices. This allows your list to show items in a specific order that doesn't change as the user scrolls through the list items.
 
-##Building the ListView
+##Building a ListView
 Now that you know about the different components involved in showing a list of data, let's take a look at a practical example. For this example, we'll create an application that simply shows a list of the presidents. This is a fairly simple example, but it provides a good demonstration of how the different pieces of a ListView work together.
 
 After creating a new project using the "Blank Activity" or "Empty Activity" templates, the first thing we need to do is define our ListView in a layout XML. While it's possible to simply define the ListView as the only view in the layout, it's a good practice to wrap your list in a layout such as a LinearLayout. This way you can easily add in additional views later if needed without having to change the layout structure.
