@@ -28,4 +28,5 @@
    * [Advanced Views - ListView](android_ui/lists.md)
    * [Advanced Views - Spinners](android_ui/advanced_views_-_spinners.md)
    * [Advanced Views - GridView](android_ui/gridview.md)
+   * Adapters
 
