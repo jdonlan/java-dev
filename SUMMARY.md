@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Fragments
 * [Java Language](java_language/java_language.md)
    * [Data Types](java_language/datatypes.md)
    * [Methods & Functions](java_language/methods_&_functions.md)
