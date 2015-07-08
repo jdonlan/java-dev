@@ -29,5 +29,4 @@
    * [Advanced Views - Spinners](android_ui/advanced_views_-_spinners.md)
    * [Advanced Views - GridView](android_ui/gridview.md)
    * [Adapters](android_ui/adapters.md)
-   * [Adapter Events & Callbacks](android_ui/adapter_events_callbacks.md)
 
