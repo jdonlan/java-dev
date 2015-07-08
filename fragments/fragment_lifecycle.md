@@ -9,7 +9,8 @@ This method is called once when the fragment has been added to an activity using
 ###onCreate(Bundle)
 Much like with activities, this method is called to do the initial creation of the fragment. This is where you would setup any member variables and start loading any data that's needed for the fragment. Unlike with activities, you cannot access any views from this method because the UI for the fragment has not been created yet.
 
-###onCreateView(LayoutInflator, ViewGroup, Bundle)
+
+### onCreateView(LayoutInflator, ViewGroup, Bundle)
 This method is called when it's time to create the view for the fragment. The sole purpose of this method is to create all layouts and views, likely by inflating a layout file, that are used in the fragment and return them so that they can be added to the activity UI structure. This method is called after onCreate() the first time it executes, but can execute in a different order depending on how the fragment is shown. If the fragment is resuming from a suspended state, this method will be called to recreate the fragment's view from the suspended state. More on that in the lifecycle events below.
 
 ###onActivityCreated(Bundle)
