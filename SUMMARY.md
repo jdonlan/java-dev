@@ -14,7 +14,7 @@
    * [Comperators](java_language/comperators.md)
    * [Collections](java_language/collections.md)
    * [Generics](java_language/generics.md)
-   * Interfaces
+   * [Interfaces](java_language/interfaces.md)
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * [Creating a Project with Android Studio](getting_started/creating_a_project_with_android_studio.md)
    * [Organization](getting_started/organization.md)
