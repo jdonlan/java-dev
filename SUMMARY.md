@@ -25,5 +25,4 @@
    * [Basic Views](android_ui/basic_views.md)
    * [Basic Layouts](android_ui/basic_layouts.md)
    * [Events and Callbacks](android_ui/events_and_callbacks.md)
-   * [Advanced View - ScrollView](android_ui/scrollview.md)
 
