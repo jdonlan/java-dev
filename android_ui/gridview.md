@@ -20,3 +20,5 @@ A GridView is defined in XML using the &lt;GridView /&gt; tag and specifying an 
 
 ###Grid Item Layout
 The grid item layout is the layout file that will determine what your grid items will look like. When creating this layout, it's important to keep the number of columns in your grid in mind. If your grid only has one column, you'll want to specify a wide layout. If your grid has many columns, you'll want to specify a more narrow layout. If you're going for a tile look, you'll want to make your grid items square. It's important to note that the same restrictions apply to grid items as they do to list items (no scrolling containers, keep text light, etc).
+
+##Building a GridView
