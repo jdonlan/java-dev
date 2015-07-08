@@ -16,3 +16,31 @@ public interface Rules{
   public void doSomething(String input);
 }
 ```
+
+##Implementing Interfaces
+As the interface is only the agreement between classes, the actual power of Java interfaces relies on their implementation in the classes themselves. This is, conveniently done with the implements keyword.
+
+```
+public class Follows implements Rules{
+  public Follows(){
+  }
+}  
+```
+
+Any defined constants from the interface would be accessible and defined in the implementing classes. In the above example, the String INTERFACETAG would be accessible in the Follows class. The code above, however, would cause a compiler error. This is because any class that implements an interface must include all the defined methods and adhere to the defined method signatures. To address this error, the Rules class would need to incorporate a doSomething() method that accepts a String parameter as follows:
+
+```
+public Rules(){
+  }
+  //
+  @Override
+  public void doSomething(String input){
+    Log.i(INTERFACETAG, "It's Alive! " + input);
+  }
+}  
+```
+
+It should be noted that the @Override annotation is used to implement the required method from the interface, similar to when extending a base class. It should also be noted that interface methods are inherently public and so the overrided method must also be defined as public. Attempting to change the method scope to private will force compiler errors as the class would be attempting to change the static scope defined within in the interface. In this example, the doSomething() method accepts the required String input and then Logs the input with the defined tag constant from the interface.
+
+####References
+http://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html
