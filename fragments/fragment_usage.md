@@ -1,6 +1,8 @@
 #Fragment Usage
 
 ##Encapsulating Features
+Fragments can be used to house features of an application, keeping their code and UI independent from other areas of the app.  This allows you to use these features in multiple areas of your application (think calendars, etc), extend features without impacting other areas of your code, and protect your application from dependency errors.
+
 Let's say we're building a calculator app. In this calculator we'll have two modes, simple and scientific, that the user can select via a menu item. Without fragments, we'd have to put all of the simple logic in the activity alongside the scientific logic in a single activity, or have multiple activities with duplicate functionality, to support each mode. We'd have to swap out the UI or entire activity depending on which type of calculator the user selects. 
 
 Looking at the app another way, the simple and scientific modes are actually two separate features of the calculator app. As such, we create utilize a fragment for the simple mode and another fragment for the scientific mode, each providing their added features the base calculator. When the user selects simple, we show the simple fragment. When the user selects scientific, we show the scientific fragment. This keeps the simple logic from interfering with the scientific logic and, since each fragment handles its own UI, we don't have to do any extra logic to check which calculator UI is showing.
