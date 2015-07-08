@@ -24,4 +24,5 @@
 * [Android User Interface](android_ui/androiduser_interface.md)
    * Events & Callbacks
    * UI Components Continued
+   * Basic Views
 
