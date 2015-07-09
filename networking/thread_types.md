@@ -108,6 +108,8 @@ msg.sendToTarget();
 ```
 
 ####References
+
+http://developer.android.com/guide/components/processes-and-threads.html#WorkerThreads
 https://developer.android.com/training/multiple-threads/define-runnable.html
 https://developer.android.com/training/multiple-threads/communicate-ui.html
 
