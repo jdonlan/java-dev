@@ -176,3 +176,29 @@ In addition to a unique authority name, your provider can also define permission
 <uses-permission android:name="com.company.android.provider.ACCESS_DATA" />
 ```
 
+###ContentProvider Methods
+
+####onCreate()
+This method is used for what most other onCreate methods are used for - setting up initial data to be used in the class.
+This is a good time to create your SQLiteOpenHelper and setup a UriMatcher object. This method should return true if your provider was successfully created or false if there was an error during setup.
+
+###getType(Uri)
+The system needs to know what type of data is being returned from your provider based on the URI that's passed in.  This method should return the MIME type of your data as a string.
+The returned MIME type will be formatted using Android's vendor specific MIME format.
+
+For URIs targeting tables:
+```
+vnd.android.cursor.dir/vnd.your_authority.table_name"
+```
+For URIs targeting a single row:
+```
+vnd.android.cursor.item/vnd.your_authority.table_name"
+```
+
+####CRUD Methods
+Content providers also implement insert, update, delete, and query methods that are exactly the same as the ones in the ContentResolver class. When the ContentResolver methods are called, the data passed into the ContentResolver methods is exactly the same as the data passed into the ContentProvider methods.
+
+If you're using SQLite, you can just call the corresponding methods on your SQLiteDatabase and return the results. Using SQLite makes these methods much simpler than using a custom data source. As with the resolver, no table name is specified, only a URI which you must use to determine the proper table name to use.
+
+
+
