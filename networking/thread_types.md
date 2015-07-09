@@ -55,7 +55,7 @@ Option 1 - Calling runOnUiThread(r) will immediately execute the code in the run
 this.runOnUiThread(r);
 ```
 
-Option 2 - Posting from a View will add the runnable execution to the end of the event queue, regardless of which thread it is called from.
+Option 2 - Posting from an object will add the runnable execution to the end of the event queue, regardless of which thread it is called from.  In this case, the runnable is posted to an ImageView, which is running on the UI Thread.
 
 ```
 // From a specific view.
