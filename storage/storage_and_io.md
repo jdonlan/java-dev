@@ -40,3 +40,9 @@ You can access the external storage directory using the Environment.getExternalS
 File sdcard = Environment.getExternalStorageDirectory();
 ```
 
+###Protected External Storage
+The last type of storage is "protected" external storage. It's called "protected" but there aren't actually any protections in place for your data. Protected external storage is a folder in the public external storage directory that is named to match the package name of your application. Since it's located in external storage, any app could traverse the directory and eventually find your folder. However, since it's named for your package name, app's can't directly access the folder without knowing your package name first. So it's publicly accessible, just not easily accessible.
+
+The reason for this directory even existing has to do with how the regular external storage directory works. When a file is stored to the external storage directory, it isn't cleaned up when an app is uninstalled. However, internal storage isn't the appropriate place to store large files. Therefore, if you have large files that you need to store but you don't want them to stick around after your app is uninstalled, you can store them in this directory. Anything stored in this directory isn't cleaned up when app data is cleared, but it is cleaned up when the app is uninstalled. So any large files or images that you need to store that are critical to app functionality should be stored here.
+
+To access the protected external storage directory, you would use the getExternalFilesDir() method of the Context class. This method accepts a string value for a file type that you can use to create multiple file type folders in your protected directory. If you just want the root of your directory, pass in null. The resulting File object can be used to create new files and folders in your directory as described in the File I/O lesson.
