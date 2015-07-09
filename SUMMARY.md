@@ -44,5 +44,5 @@
    * [URLConnection](networking/urlconnection.md)
    * [Network Status](networking/network_status.md)
 * [Storage and I/O](storage/storage_and_io.md)
-   * Internal Storage
+   * [Internal Storage](storage/internal_storage.md)
 
