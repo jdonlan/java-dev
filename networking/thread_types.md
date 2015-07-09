@@ -63,7 +63,15 @@ ImageView iv = (ImageView)findViewById(R.id.image_view);
 iv.post(r);
 ```
 
-###Example Runnable via Handler
+##Runnable with Handler
+
+Handlers are used to process a queue of events that need to happen on the UI thread. The main thread uses a Handler created by the system to process all main thread events.
+When using a Handler, they must be declared as static so that they don’t leak memory due to lingering messages in the queue.
+Further, Handlers must be created from the main thread in order to be used to update the UI.
+
+When data is needing to be sent to a handler, a Message can be utilized using the Handler's *handleMessage()* method.
+
+###Example Handler with Post
 ```
 // Creating our static handler.
 static Handler handler = new Handler();
@@ -78,5 +86,24 @@ Runnable r = new Runnable() {
 
 // Post the runnable to the main thread.
 handler.post(r);
+```
+
+###Example Handler using Message
+```
+// Creating our static handler.
+static Handler handler = new Handler() {
+	@Override
+	public void handleMessage(Message msg) {
+		// Message is handled on the main thread.
+		MyObject obj = (MyObject)msg.obj;
+	}
+};
+
+// Create a new message and set an object value.
+Message msg = handler.obtainMessage();
+msg.obj = new MyObject();
+
+// Send the message to the handler.
+msg.sendToTarget();
 ```
 
