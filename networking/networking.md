@@ -1,0 +1,2 @@
+#Networking in Android
+One of the key advantages to mobile devices is the way they keep us connected to the world around us while on the go. To do so, many mobile applications connect to the internet to push and pull data, allowing for rich dynamic content to be delivered straight to our device from anywhere we need to be. The Android SDK provides developers with a wide array of tools to detect network availability, request network data, and accept and manipulate that data for use within the application.
