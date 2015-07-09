@@ -1,0 +1,8 @@
+#URLConnection
+As mentioned previously, hundreds of thousands of applications use data connections to connect to internet or network resources everyday. The most common function of these data connections is to pull down text or image data from a web resource or API. To do this, Android provides several different methods for creating a network connection and pulling resources. The only connection method that still gets regular updates in the SDK, however, is the URLConnection class, so we'll focus on this method.
+
+##GET versus POST
+Before we get into how to use the URLConnection class, it's important that you first understand the two types of network transactions that you'll be using: GET and POST. A POST transaction does exactly what it says it does, it posts data to a network resource. This type of transaction is commonly used when filling out form data on a web page, such as user registration, where you want to post the data to a web service and add to or alter the data in the corresponding database or datastore. When it comes to mobile apps that use a third party API, you typically won't be making very many post transactions since web services don't want just anybody altering their data.
+
+The other transaction type, GET, is the one you'll be using the most often. GET transactions involve actually getting data back from a web service or API. When performing a GET transaction, you might just hit a static URL endpoint or web address. However, it's very common for GET transactions to accept some sort of query or data parameters attached to the end of the URL and return data that matches the query. It's important to note that GET transactions do not alter the backend database or datastore in the process of returning data.
+
