@@ -16,5 +16,5 @@ ANR, or Application Not Responding, is an error state that is triggered when lon
 It should be noted that the threshold for users detecting slowness in an app is around 100-200ms. Operations on the main thread should not take longer than this. For simple operations, try and optimize code as best as possible. For longer running operations, move those operations to a background thread.
 
 ####References
-http://developer.android.com/guide/components/processes-and-threads.html#WorkerThreads
+http://developer.android.com/guide/components/processes-and-threads.html
 
