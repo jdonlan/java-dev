@@ -12,7 +12,7 @@ While it seems counter-intuitive, ContentProviders are NOT a data source.  In fa
 
 If ContentProviders aren't a data source, where is the actual data? The short answer is - anywhere.  ContentProviders can access data from anywhere within the Android system that it has access to.  While ContentProviders give the appearance and basic structure of a database, the data doesn't have to be actually stored in one.  That said, as the structure of ContentProviders mimic databases, it does make it easy when the data is actually coming from a database.  Built-in providers, such as those listed above, use SQLite databases as their data source.
 
-##Accessing Data
+##Working with Provider Data
 ContentProvider accessible data is accessed using the ContentResolver class. You can retrieve a ContentResolver instance by calling the getContentResolver() method of the Context class. ContentResolvers allow you to perform the following functions to a ContentProvider: insert, update, delete, and query. Sound familiar?
 
 All ContentResolver methods that access a provider work very similarly to how a SQLiteDatabase works. The one key difference is that you don't specify a table name for your actions, you specify a content URI that points to a specific ContentProvider. Every provider has a unique URI that allows you access to its data.  That URI changes slightly based on the data that you want to access.
@@ -34,10 +34,10 @@ content://user_contacts/base_data/1
 The URI for a provider can be a long and complicated name which opens you up to annoying errors caused by typos and misspellings. Additionally, keeping track of all available table and column names can be quite a pain.
 Contracts, as you may recognize from the built-in providers, can solve this issue.
 
-##Contracts
+###Contracts
 A contract is a type of class that goes along with a ContentProvider to provide uniform access to commonly used values. Contract classes are just like any other class except that they should be marked as final and only contain variables and inner classes that are marked as static and final in their declaration. They are not required to use content providers, but they make life much easier so you should create one to go with your provider whenever possible.
 
-###Example Contract
+####Example Contract
 
 ```
 public final class DataContract {
@@ -63,9 +63,9 @@ public final class DataContract {
 
 As you can see in the above contract, the use of static final strings alleviates potential problems with using strings for data components.  As the IDE can recognize these constants, we can let it do the heavy lifting with forming our URI.
 
-##ContentResolver Operations
+###ContentResolver Operations
 
-###insert
+####insert
 The insert method allows you to insert data into a ContentProvider. This method should return a Uri object that points to the newly added item.
 
 ```
@@ -82,7 +82,7 @@ values.put(DataContract.AGE, 237);
 Uri newItem = getContentResolver().insert(accessUri, values);
 ```
 
-###update
+####update
 The update method allows you to update data in a ContentProvider based on a selection. If you don't provide a selection, all data will be updated. Method returns the number of rows that were updated.
 
 ```
@@ -102,7 +102,7 @@ int updatedRows = getContentResolver()
     .update(accessUri, values, whereClause, whereArgs);
 ```
 
-###delete
+####delete
 The delete method allows you to delete data in a ContentProvider based on a selection. If you don't provide a selection, all data will be deleted. Method returns the number of rows that were deleted.
 
 ```
@@ -118,7 +118,7 @@ int deletedRows = getContentResolver()
     .delete(accessUri, whereClause, whereArgs);
 ```
 
-###query
+####query
 The query method allows you to query for any number of rows or columns in a ContentProvider. You can specify specific columns or just get all of them. Optionally you can specify a sort order. This method returns a Cursor that contains the returned data.
 
 ```
@@ -135,3 +135,5 @@ String[] columns = new String[] {
 Cursor nameDataCursor = getContentResolver()
     .query(accessUri, columns, null, null, null);
 ```
+
+##Building a ContentProvider
