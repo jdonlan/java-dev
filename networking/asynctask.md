@@ -31,3 +31,5 @@ Once your doInBackground() method finishes all operations and returns, the data 
 ###protected void onCancelled(Result result) - Optional
 If your task is canceled before it finishes executing, onPostExecute() will never be called but onCancelled() will. The purpose of this method is to handle any data that is returned from doInBackground() if the task is canceled. Sometimes you'll cancel a task just as it finishes and usable data will be returned. If the data is usable, you might want to handle it instead of ignore it which is why this method exists. This method is executed on the UI thread and can be used to update the UI with an error dialog if canceling a task results in an error.
 
+####References
+http://developer.android.com/reference/android/os/AsyncTask.html
