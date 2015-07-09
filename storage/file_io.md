@@ -56,3 +56,30 @@ if(!newFile.exists()) {
 ```
 
 It should be noted that creating new files in this way is generally not required and not very useful. When writing out to a file using a stream, if the file being pointed to doesn't exist, the stream will create a new file before writing. Creating files in this way is useful though when creating .nomedia files, which are files that have no content. These .nomedia files will be covered later in the book, but just keep in mind that this method of file creation exists as it will be needed down the road.
+
+##FileOutputStream
+Now that we know how to work with File objects, let's take a look at how to actually write data out to a file. Of the two operations, input and output, file output is by far the easier of the two. The first thing we need to do is get a File object for where we want to store our data, and some actual data to store.
+
+```
+private void writeToFile(Context _c, String _filename, String _data) {
+	// Storing in our "protected" directory
+	File external = _c.getExternalFilesDir(null);
+	File file = new File(external, _filename);
+}
+```
+
+Now that we have our file, we need to create a new FileOutputStream using that file. Creating a new FileOutputStream has the potential to throw an exception if there are errors in accessing the file, so you have to wrap your code in a try/catch block.
+
+```
+private void writeToFile(Context _c, String _filename, String _data) {
+	File external = _c.getExternalFilesDir(null);
+	File file = new File(external, _filename);
+	
+	try {
+		// Creating new output stream
+		FileOutputStream fos = new FileOutputStream(file);
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
+```
