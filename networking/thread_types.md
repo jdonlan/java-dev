@@ -108,5 +108,7 @@ msg.sendToTarget();
 ```
 
 ####References
+https://developer.android.com/training/multiple-threads/define-runnable.html
+https://developer.android.com/training/multiple-threads/communicate-ui.html
 
 
