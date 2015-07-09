@@ -88,3 +88,10 @@ Update the description of our example article in the articles table:
 UPDATE articles SET description=‘Changed’ WHERE title=‘Example Title’
 ```
 
+###Deleting Table Data
+Data is deleted from a table using a DELETE statement. The statement is formatted starting with the command DELETE FROM, followed by the table name, and finally a WHERE condition.  You'll notice that the field names are omitted from this command.  This is because only entire rows can be deleted.  If you want to set only some fields in a row to empty, you must use an UPDATE command.  As with the UPDATE command, the WHERE clause is optional and not providing a WHERE clause will delete all records in the table.
+
+Delete our example article from the articles table:
+```
+DELETE FROM articles WHERE title=‘Example Title’
+```
