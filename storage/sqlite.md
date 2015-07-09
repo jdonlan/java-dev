@@ -55,4 +55,11 @@ To get all articles starting with the word “test” or containing the word “
 ```
 SELECT title FROM articles WHERE title LIKE ‘test%’ OR title LIKE ‘%example%’
 ```
+###Soring Query Results
+Query results can be sorted by adding an ORDER BY statement to the end of the SELECT statement, after the WHERE clause if included. ORDER BY statements are followed by the column name and either ASC or DESC for ascending or descending order. Only  INTEGER, TEXT, or REAL columns should be used for sorting to get a reliable sort behavior.  
+
+Sorting all articles by title name in ascending order:
+```
+SELECT title FROM articles ORDER BY title ASC
+```
 
