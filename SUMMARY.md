@@ -51,6 +51,6 @@
    * [Shared Preferences](storage/shared_preferences.md)
    * [Preference Fragment](storage/preference_fragment.md)
    * [SQLite](storage/sqlite.md)
-   * [ContentProvider](storage/contentprovider.md)
    * SQLite in Android
+   * [ContentProvider](storage/contentprovider.md)
 
