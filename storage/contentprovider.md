@@ -148,7 +148,7 @@ The authority for your provider defines the URI that is used to access your Cont
 
 In addition to a unique authority name, your provider can also define permissions to help safeguard against unauthorized access. Permissions can be defined in the manifest using the android:permission property of the provider tag and the &lt;permission&gt; tag. Permission names should be unique so that other apps don't accidentally gain access to your data and should start with the authority name of your provider. If the permission name doesn't start with the content provider authority, they will not work.
 
-###Provider Tag Example
+####Provider Tag Example
 ```
 <!--
     Add your permission to the manifest so other apps can access it.
