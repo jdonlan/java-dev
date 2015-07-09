@@ -88,7 +88,7 @@ Runnable r = new Runnable() {
 handler.post(r);
 ```
 
-####Handler using Message
+####Using Message
 ```
 // Creating our static handler.
 static Handler handler = new Handler() {
