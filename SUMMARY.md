@@ -47,5 +47,5 @@
    * [Internal Storage](storage/internal_storage.md)
    * [External Storage](storage/external_storage.md)
    * [File I/O](storage/file_io.md)
-   * Serializable
+   * [Serializable](storage/serializable.md)
 
