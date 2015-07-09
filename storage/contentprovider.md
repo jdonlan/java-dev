@@ -137,3 +137,42 @@ Cursor nameDataCursor = getContentResolver()
 ```
 
 ##Building a ContentProvider
+Start with a class that extends ContentProvider and overrides the required methods.
+All providers must be registered in the manifest using the &lt;provider&gt; tag.
+All providers must provide a URI authority, more commonly referred to as a domain when it comes to web URIs. 
+```
+content://com.company.android.provider/table_name/
+```
+
+The authority for your provider defines the URI that is used to access your ContentProvider from other applications. All providers are accessed via a URI that uses the content schema (content://). The authority for your provider should be unique across all applications. Because of this, your package name makes a good authority name. Content providers can have multiple authorities for pointing to different data sources, but we'll only be covering single source providers in this book.
+
+In addition to a unique authority name, your provider can also define permissions to help safeguard against unauthorized access. Permissions can be defined in the manifest using the android:permission property of the provider tag and the &lt;permission&gt; tag. Permission names should be unique so that other apps don't accidentally gain access to your data and should start with the authority name of your provider. If the permission name doesn't start with the content provider authority, they will not work.
+
+###Provider Tag Example
+```
+<!--
+    Add your permission to the manifest so other apps can access it.
+    This goes right underneath your uses-permission tags. 
+ -->
+<permission android:name="com.company.android.provider.ACCESS_DATA"
+    android:protectionLevel="dangerous" />
+
+<!-- 
+    Providers should be enabled and exported so
+    that you can access them from other apps.
+ -->
+<provider android:name=".MyProvider"
+    android:authorities="com.company.android.provider"
+    android:enabled="true"
+    android:exported="true"
+    android:permission="com.company.android.provider.ACCESS_DATA" >
+
+</provider>
+
+<!-- 
+    Any app that uses your provider must add the 
+    defined permission to their manifest like so: 
+ -->
+<uses-permission android:name="com.company.android.provider.ACCESS_DATA" />
+```
+
