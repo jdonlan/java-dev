@@ -43,5 +43,5 @@
    * [Connecting to APIs](networking/connecting_to_apis.md)
    * [URLConnection](networking/urlconnection.md)
    * [Network Status](networking/network_status.md)
-* Storage and I/O
+* [Storage and I/O](storage/storage_and_io.md)
 
