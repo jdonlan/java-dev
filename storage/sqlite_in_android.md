@@ -71,3 +71,25 @@ The delete method works identical same as update, without the updated values par
 There are several forms of this method, we'll focus on the one with eight parameters: table name, columns, WHERE clause, WHERE clause arguments, GROUP BY clause, HAVING clause, ORDER BY clause, and LIMIT clause. All of these clauses are formatted without the actual associated keyword. If you do not need a specific clause, pass in null. The query() method returns a Cursor object.
 
 ##Cursors
+Cursors represent a grouping of data that was returned from a database query. They work like an iterator for moving forward or backwards through the returned data and have many useful functions that assist with navigating data. 
+
+**getCount()** - return row count.
+**get&lt;Type&gt;** - get a field value of the appropriate type.
+
+```
+// Query for all columns and rows in “articles”
+Cursor c = db.query(“articles”, null, null, null, null, null, null, null);
+
+if(c == null || c.getCount() == 0) {
+	// No records
+} else {
+	c.moveToFirst();
+
+	int id = c.getInt(0);
+	String title = c.getString(1);
+	String description = c.getString(2);
+	String publishDate = c.getString(3);
+	String url = c.getString(4);
+}
+```
+
