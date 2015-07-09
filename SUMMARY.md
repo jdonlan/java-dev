@@ -46,5 +46,5 @@
 * [Storage and I/O](storage/storage_and_io.md)
    * [Internal Storage](storage/internal_storage.md)
    * [External Storage](storage/external_storage.md)
-   * File I/O
+   * [File I/O](storage/file_io.md)
 
