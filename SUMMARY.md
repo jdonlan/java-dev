@@ -48,4 +48,5 @@
    * [External Storage](storage/external_storage.md)
    * [File I/O](storage/file_io.md)
    * [Serializable](storage/serializable.md)
+   * Shared Preferences
 
