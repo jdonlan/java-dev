@@ -1,6 +1,6 @@
 #SQLite
 
-##Data Tables
+##The SQLite Language
 Data is organized into two-dimensional tables of rows and columns. Columns define the type of being stored and what that data represents. Rows represent a single data entry that is composed of the data points represented by the columns. 
 
 ###Primary Keys
@@ -95,3 +95,4 @@ Delete our example article from the articles table:
 ```
 DELETE FROM articles WHERE title=‘Example Title’
 ```
+
