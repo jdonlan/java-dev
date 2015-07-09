@@ -38,4 +38,5 @@
    * [Fragment Activity Communication](fragments/fragment_activity_communication.md)
 * [Networking](networking/networking.md)
    * [Understanding Threads](networking/understanding_threads.md)
+   * Thread Types
 
