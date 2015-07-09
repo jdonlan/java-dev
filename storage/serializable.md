@@ -91,3 +91,7 @@ try {
 
 That's it for reading in an object. As you can tell, the code for reading an object from a file is a lot shorter and a lot less complex than reading in a text file. Serializable objects can't be used for all data storage such as images, for example, but it's a good way to store complex data types in an easy to read and easy to write manner.
 
+####References
+http://developer.android.com/reference/java/io/Serializable.html
+http://developer.android.com/reference/java/io/ObjectInputStream.html
+http://developer.android.com/reference/java/io/ObjectOutputStream.html
