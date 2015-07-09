@@ -17,4 +17,4 @@ It should be noted that the threshold for users detecting slowness in an app is 
 
 ####References
 http://developer.android.com/guide/components/processes-and-threads.html
-
+http://developer.android.com/training/articles/perf-anr.html
