@@ -13,5 +13,21 @@ AsyncTask<Params, Progress, Result>
 * **Progress** - The type to be used when reporting progress. This is typically an Integer or Long but you can report progress with any type you want.
 * **Result** - The type to be used when returning data from the doInBackground() method. This data will be passed to the onPostExecute() callback after doInBackground() returns.
 
-Sss
+##AsyncTask Callbacks
+When creating your own AsyncTask, there are five callbacks that can you can implement but only one of them is required.
+
+###protected void onPreExecute() - Optional
+This method is called before doInBackground() starts and is executed on the UI thread. This method allows you to perform any setup that needs to be done before the task starts, such as showing a progress dialog.
+
+###protected Result doInBackground(Params... params) - Required
+This is where all the magic happens. This method is executed on a background worker thread and uses the data passed into the execute method to perform background operations. Keep in mind that since this method isn't on the UI thread, you cannot access your UI directly from this method. If you look at the method signature, you'll notice that it takes in the type specified in the Params generic type but you'll also notice that it's qualified with ... after the type. The ... means that any number of parameters can be passed into this method, including none. So if you call execute() with nothing passed in then your doInBackground() won't have anything for the Params... parameter. If you pass in multiple values such as execute(val1, val2, val3), then you can access them in doInBackground() much like you would an array (e.g. params[0], params[1], params[2]).
+
+###protected void onProgressUpdate(Progress... values) - Optional
+This method is called whenever you call publishProgress(). This method is executed on the UI thread and is used to update the UI with the task's progress. For example, if you were to create a task to download files, you could publish your progress after each file is downloaded and use this method to update your progress dialog with the number of completed files. As with doInBackground() this method can take in any number of parameters and the parameter type is determined by the Progress type you specified in your class definition.
+
+###protected void onPostExecute(Result result) - Optional/Recommended
+Once your doInBackground() method finishes all operations and returns, the data that it returns is passed to this method. This method executes on the UI thread and is meant to update the UI with any data that was updated or retrieved in the doInBackground() method. While this callback is optional to implement, it is highly recommended that this callback is implemented to handle the data returned from the task execution.
+
+###protected void onCancelled(Result result) - Optional
+If your task is canceled before it finishes executing, onPostExecute() will never be called but onCancelled() will. The purpose of this method is to handle any data that is returned from doInBackground() if the task is canceled. Sometimes you'll cancel a task just as it finishes and usable data will be returned. If the data is usable, you might want to handle it instead of ignore it which is why this method exists. This method is executed on the UI thread and can be used to update the UI with an error dialog if canceling a task results in an error.
 
