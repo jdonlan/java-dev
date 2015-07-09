@@ -83,3 +83,102 @@ private void writeToFile(Context _c, String _filename, String _data) {
 	}
 }
 ```
+
+Now all that's left to do is write the data to the output stream and close it all down. OutputStream objects, including FileOutputStream, expect all data to be in a byte[] format. When writing byte or String data this is easy since bytes work natively and the String class has a getBytes() method that returns the string data in byte[] format. Let's write our data to the stream and close it.
+
+```
+private void writeToFile(Context _c, String _filename, String _data) {
+	File external = _c.getExternalFilesDir(null);
+	File file = new File(external, _filename);
+	
+	try {
+		FileOutputStream fos = new FileOutputStream(file);
+		// Write bytes to the stream
+		fos.write(_data.getBytes());
+		// Close the stream to save the file.
+		fos.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
+```
+
+That's it for file output. It's all a matter of opening a new FileOutputStream that points to a file, converting your data to bytes, and writing those bytes out. Once the stream is closed, the file is saved. File input, well that takes a few extra steps.
+
+##FileInputStream
+Once you have data that's written to a file, you can load that back into your app using a FileInputStream. Reading in from a file can be done in many different ways, and ultimately it depends on what type of data is stored in your file. If your file contains an image, you'll want to use the BitmapFactory class to load in the data. In this example, we'll cover how to load in string data since it's the most common type of data you'll be working with.
+
+As with before, we'll want to start off with our File object that represents the file we want to read from. We then follow that up by creating a new FileInputStream that points to the file we want to read in. Like with the output stream, creating an input stream also has the ability to throw exceptions so we'll want to wrap it all up in a try/catch block.
+
+```
+private String readFromFile(String _filename) {
+	File external = getExternalFilesDir(null);
+	File file = new File(external, _filename);
+	
+	try {
+		FileInputStream fin = new FileInputStream(file);
+	} catch(IOException e) {
+		e.printStackTrace();
+	}
+	
+	return null;
+}
+```
+
+As with FileOutputStream's write() method, the read() method of FileInputStream only works with bytes. To get around needing to work with bytes, we'll instead use stream reader classes to read strings. Stream reader classes like InputStreamReader and BufferedReader are used to read from streams in a safe manner without having to directly access individual bytes. In our example, we'll wrap our FileInputStream in an InputStreamReader to read from the stream. Then we'll wrap our InputStreamReader in a BufferedReader. InputStreamReader is used to read directly from an input stream using character arrays since it can't pull full strings from the stream all at once. BufferedReader is used to wrap other types of readers to allow them to read full strings and full lines of text all at once by buffering several read operations in the background. Since we want to read a lot of text at once, we'll use this method of reading.
+
+```
+private String readFromFile(String _filename) {
+	File external = getExternalFilesDir(null);
+	File file = new File(external, _filename);
+	
+	try {
+		FileInputStream fin = new FileInputStream(file);
+		// Creating our stream readers
+		InputStreamReader inReader = new InputStreamReader(fin);
+		BufferedReader reader = new BufferedReader(inReader);
+	} catch(IOException e) {
+		e.printStackTrace();
+	}
+	
+	return null;
+}
+```
+
+Now that we have our stream readers, we can start pulling data from the file using the reader. To do this, we first setup a StringBuffer object. The buffer is used to hold any data we get back from the reader. Then we cycle through each line of text in the file using the reader's readLine() method. The readLine() method returns a full line of text from the underlying stream and strips off the new line character. If you want to keep the new line characters, you'll have to add them in manually as we do in our example. Everytime you read a line of text from the reader, add that text to the buffer. When there are no more lines left to read, close the BufferedReader, which will in turn close the underlying stream, and you're done. The StringBuffer now has all of the data as read from the file. Use the toString() method of the StringBuffer class to get the contents as a string, and use it however you wish.
+
+```
+private String readFromFile(String _filename) {
+	File external = getExternalFilesDir(null);
+	File file = new File(external, _filename);
+	
+	try {
+		FileInputStream fin = new FileInputStream(file);
+		InputStreamReader inReader = new InputStreamReader(fin);
+		BufferedReader reader = new BufferedReader(inReader);
+	
+		// Reading data from our file using the reader
+		// and storing it our string buffer.
+		StringBuffer buffer = new StringBuffer();
+		String text = null;
+		// Make sure a line of text is available to be read.
+		while((text = reader.readLine()) != null) {
+			buffer.append(text + "\n");
+		}
+		// Close the reader and underlying stream.
+		reader.close();
+		// Convert the buffer to a string.
+		return buffer.toString();
+	} catch(IOException e) {
+		e.printStackTrace();
+	}
+	
+	return null;
+}
+```
+
+####References
+http://developer.android.com/reference/java/io/FileOutputStream.html
+http://developer.android.com/reference/java/io/FileInputStream.html
+http://developer.android.com/reference/java/io/BufferedReader.html
+http://developer.android.com/reference/android/os/Environment.html
