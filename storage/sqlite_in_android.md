@@ -93,3 +93,20 @@ if(c == null || c.getCount() == 0) {
 }
 ```
 
+###Displaying Cursor Data - ResourceCursorAdapter
+There is a special type of adapter used to work with database cursors known as ResourceCursorAdapter. This adapter will accept a context, layout file, and a cursor. In order to use this adapter, you must override the bindView method to bind cursor data to an item view.  One of the nice things about this adapter is that the Cursor is advanced for you and so is the cursor count.  The data shown in the list can be updated by calling swapCursor followed by notifyDataSetChanged.  Note that the Cursor must contain an ID field or the adapter will not work.
+
+```
+class MyCursorAdapter extends ResourceCursorAdapter {
+
+	public MyCursorAdapter(Context c, Cursor cur) {
+		super(c, R.layout.simple_list_item_1, cur, 0);
+	}
+
+	@Override
+	public void bindView(View v, Context c, Cursor cur) {
+		String title = cur.getString(1);
+		((TextView)v).setText(title);
+	}
+}
+```
