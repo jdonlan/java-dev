@@ -200,5 +200,36 @@ Content providers also implement insert, update, delete, and query methods that 
 
 If you're using SQLite, you can just call the corresponding methods on your SQLiteDatabase and return the results. Using SQLite makes these methods much simpler than using a custom data source. As with the resolver, no table name is specified, only a URI which you must use to determine the proper table name to use.
 
+###UriMatcher
+UriMather allows for setup of different Uri patterns to quickly match a Uri to a table name or row number. As this is part of the overall ContentProvider functionality, it should be declared as part of the ContentProvider's onCreate method. 
 
+Patterns are established using the authority, path, and optional wildcards and are then mapped to integer values for easy comparisons.
 
+* <nowiki>*</nowiki> wildcard represents any character. 
+* <nowiki>#</nowiki> wildcard represents any number.
+
+####UriMatcher Example
+```
+// Create a matcher with a default match value.
+UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
+
+// This pattern will match any URI that targets our table.
+matcher.addURI("com.example.provider", "data_table", 1);
+// This pattern will match any URI that targets a single row in our table.
+matcher.addURI("com.example.provider", "data_table/#", 2);
+
+// A URI that points at our provider that we can test against.
+Uri exampleUri = Uri.parse("content://com.example.provider/data_table/3");
+
+int match = matcher.match(exampleUri);
+switch(match) {
+    case 1:
+        break;
+    case 2:
+        // Our example matches here.
+        break;
+    case UriMatcher.NO_MATCH:
+        // Throw an error of some sort.
+        break;
+}
+```
