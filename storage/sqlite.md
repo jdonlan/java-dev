@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS articles (
 )
 ```
 
-###Querying a Table
+###Querying a Table (SELECT)
 Queries are performed using a SELECT statement. The SELECT statement is formatted as the command SELECT, followed by the data fields (columns) in a comma separated list, followed by the table or tables that house the data.
 
 Assuming a table named “articles” and we want to fetch all article titles from a column named “title”:
@@ -40,8 +40,19 @@ Assuming a table named “articles” and we want to fetch all article titles fr
 SELECT title FROM articles
 ```
 
-####Filter the Selection
+####Filter the Selection (WHERE)
 
-A SELECT statement will return all rows in a table by default. Returned rows can be filtered using a WHERE clause. WHERE statements are formatted as the command WHERE, then column name(s) a comparison operator (=,<,>,etc), then column value(s).  This WHERE clause is placed after the SELECT statement as the statement tail. String column values are wrapped in quotes while numerical values contain no quotes.
-To get all articles named “test”:
+A SELECT statement will return all rows in a table by default. Returned rows can be filtered using a WHERE clause. WHERE statements are formatted as the command WHERE, then column name(s) a comparison operator, then column value(s).  This WHERE clause is placed after the SELECT statement as the statement tail. String values are wrapped in quotes while numerical values contain no quotes.
+
+To get all articles named “test” from the table above:
+```
 SELECT title FROM articles WHERE title=‘test’
+```
+
+The WHERE clause can also be filtered using a wildcard (%) and the LIKE keyword for string values. Standard <, >, <=, >=, != operators can be used for numeric values. != works for strings as well. Can combine multiple WHERE clauses with AND/OR keywords. 
+
+To get all articles starting with the word “test” or containing the word “example”:
+```
+SELECT title FROM articles WHERE title LIKE ‘test%’ OR title LIKE ‘%example%’
+```
+
