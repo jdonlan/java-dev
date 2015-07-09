@@ -33,3 +33,6 @@ public class MainActivity extends Activity {
 	}
 }
 ```
+
+####References
+http://developer.android.com/guide/topics/data/data-storage.html
