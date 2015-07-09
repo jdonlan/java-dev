@@ -66,3 +66,6 @@ db.update("articles", v, where, whereArgs);
 
 ###delete()
 The delete method works identical same as update, without the updated values parameter, as delete statements cannot target individual fields, but only entire rows.
+
+###query()
+There are several forms of this method, we'll focus on the one with eight parameters: table name, columns, WHERE clause, WHERE clause arguments, GROUP BY clause, HAVING clause, ORDER BY clause, and LIMIT clause. All of these clauses are formatted without the actual associated keyword. If you do not need a specific clause, pass in null. The query() method returns a Cursor object.
