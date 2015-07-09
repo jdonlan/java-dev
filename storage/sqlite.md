@@ -96,3 +96,4 @@ Delete our example article from the articles table:
 DELETE FROM articles WHERE title=‘Example Title’
 ```
 
+##SQLite in Android
