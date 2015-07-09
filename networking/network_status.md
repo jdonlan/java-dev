@@ -52,3 +52,8 @@ For most applications, isConnected() should be thorough enough as you won't care
 This whole process of checking network type and network connectivity might seem a bit tedious, but it's a very important step in providing a good user experience. If you don't check for connectivity, your data connections will still work so long as a connection exists. However, by checking for connectivity before attempting to make a connection, you can give your user information about connection status. 
 
 If an attempt to make a network connection fails, for instance, there are numerous reasons which could be the fault. The best you can do at that point is tell the user to try again. If the device doesn't have a data connection, however, trying again isn't going to do anything but cause another failure, frustrating the user. If you instead check for connectivity before making a data connection, you'll know immediately if the connection is the problem. If it is, you can inform the user and they can attempt to switch connections to one that works, or try the operation again once they get to a working connection.
+
+####References
+http://developer.android.com/training/monitoring-device-state/connectivity-monitoring.html
+http://developer.android.com/reference/android/net/ConnectivityManager.html
+http://developer.android.com/reference/android/net/NetworkInfo.html
