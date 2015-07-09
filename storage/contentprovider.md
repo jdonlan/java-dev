@@ -233,3 +233,8 @@ switch(match) {
         break;
 }
 ```
+
+####References
+
+http://developer.android.com/guide/topics/providers/content-providers.html
+http://developer.android.com/reference/android/content/ContentProvider.html
