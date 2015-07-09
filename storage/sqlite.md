@@ -80,3 +80,11 @@ Insert a new article into our articles table:
 INSERT INTO articles (title, description) VALUES (‘Example Title’, ‘Example Description’)
 ```
 
+###Updating Table Data
+Data can be updated using an UPDATE statement. Statement is formatted as UPDATE, followed by the table name, the word SET, followed by a comma separated list of key value pairs for field names and values, and finally a WHERE condition formatted as it would in a query.  It should be noted that the WHERE clause is optional but if no WHERE clause is provided then all rows are updated.
+
+Update the description of our example article in the articles table:
+```
+UPDATE articles SET description=‘Changed’ WHERE title=‘Example Title’
+```
+
