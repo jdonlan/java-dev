@@ -10,7 +10,7 @@ While Worker threads can be used to perform operations that update the UI, code 
 ##Runnable
 A runnable is a type of object that contains code you want to execute on a thread. Runnable objects have a single method named run() that must be overriden. Runnable objects can be used to execute code on the main thread, but are more often used to run code on a background or worker thread.  When a runnable is executed on a background thread, it is important to note the limitation of background threads not being able to touch the UI.
 
-###Example Runnable on Background Thread
+##Runnable on Background Thread
 ```
 // Create a new Runnable object first.
 Runnable r = new Runnable() {
