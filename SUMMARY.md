@@ -45,5 +45,5 @@
    * [Network Status](networking/network_status.md)
 * [Storage and I/O](storage/storage_and_io.md)
    * [Internal Storage](storage/internal_storage.md)
-   * External Storage
+   * [External Storage](storage/external_storage.md)
 
