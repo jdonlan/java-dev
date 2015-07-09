@@ -64,4 +64,5 @@ String where = "title='?' AND description='?'";
 db.update("articles", v, where, whereArgs);
 ```
 
-The delete method works the same as update, minus the updated values parameter.
+###delete()
+The delete method works identical same as update, without the updated values parameter, as delete statements cannot target individual fields, but only entire rows.
