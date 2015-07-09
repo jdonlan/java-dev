@@ -19,3 +19,17 @@ The last type of storage is "protected" external storage. It's called "protected
 The reason for this directory even existing has to do with how the regular external storage directory works. When a file is stored to the external storage directory, it isn't cleaned up when an app is uninstalled. However, internal storage isn't the appropriate place to store large files. Therefore, if you have large files that you need to store but you don't want them to stick around after your app is uninstalled, you can store them in this directory. Anything stored in this directory isn't cleaned up when app data is cleared, but it is cleaned up when the app is uninstalled. So any large files or images that you need to store that are critical to app functionality should be stored here.
 
 To access the protected external storage directory, you would use the getExternalFilesDir() method of the Context class. This method accepts a string value for a file type that you can use to create multiple file type folders in your protected directory. If you just want the root of your directory, pass in null. The resulting File object can be used to create new files and folders in your directory as described in the File I/O lesson.
+
+```
+public class MainActivity extends Activity {
+	
+	@Override
+	protected void onCreate(Bundle _savedInstanceState) {
+		super.onCreate(_savedInstanceState);
+		setContentView(R.layout.activity_main);
+ 
+		// Getting the "protected" external storage directory
+		File appExternal = this.getExternalFilesDir(null);
+	}
+}
+```
