@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 ```
 
 ##External Storage
-External storage refers to any storage location that isn't internal storage. In older versions of Android, external storage meant you were referring to an SD card that was inserted into the device. However, too many applications needed some sort of non-private space to share/store files to, so Android now emulates an SD card on every single device. Referring to external storage on a modern Android OS, thus, means you're referring to either a physical SD card OR a folder on the device named "sdcard". That said, never refer directly to any file or folder to work with external storage as you'll see below.
+External storage refers to any storage location that isn't internal storage. In older versions of Android, external storage meant you were referring to an SD card that was inserted into the device. However, too many applications needed some sort of non-private space to share/store files to, so Android now emulates an SD card on every single device. Referring to external storage on a modern Android OS, thus, means you're referring to either a physical SD card OR a folder on the device named "sdcard". That said, never refer directly to any file or folder to work with external storage as Android has a specific protocol for access these directories depending on the task at hand.
 
 
 
