@@ -8,7 +8,7 @@ Remember, operations  performed on a background thread cannot alter UI component
 ##Defining an AsyncTask
 As mentioned above, AsyncTask is a generic class. While most generic classes will only have one or two types that you can specify, this one has three types as outlined below.
 
-AsyncTask<Params, Progress, Result>
+AsyncTask&lt;Params, Progress, Result&gt;
 * **Params** - The type to be used for the parameters that are passed into the task when executed. This type is passed into the doInBackground() callback to be used in background operations.
 * **Progress** - The type to be used when reporting progress. This is typically an Integer or Long but you can report progress with any type you want.
 * **Result** - The type to be used when returning data from the doInBackground() method. This data will be passed to the onPostExecute() callback after doInBackground() returns.
