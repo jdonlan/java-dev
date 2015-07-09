@@ -41,4 +41,5 @@
    * [Thread Types](networking/thread_types.md)
    * [AsyncTask](networking/asynctask.md)
    * [Connecting to APIs](networking/connecting_to_apis.md)
+   * URLConnection
 
