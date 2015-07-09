@@ -110,3 +110,6 @@ class MyCursorAdapter extends ResourceCursorAdapter {
 	}
 }
 ```
+
+####References
+http://developer.android.com/training/basics/data-storage/databases.html
