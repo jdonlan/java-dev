@@ -72,3 +72,11 @@ Getting the top 5 articles starting with the word "test" in alphabetical order:
 SELECT title FROM articles WHERE title LIKE ‘test%’ ORDER BY title ASC LIMIT 5
 ```
 
+###Writing to a Table
+Data is added to a table as a new row using an INSERT INTO statement.  This statement is formatted as INSERT INTO, followed by the table name, a comma separated list of field names surrounded by parenthesis, the word VALUES, followed by a comma separated list of values that are respective to the field list provided. If a field is a required data piece of the table, it must be included in the list of field names and have a corresponding value.  If a field is optional it can be omitted.  The one exception to this rule is fields that are required but are automatically generated, such as in the case of an automatically incrementing primary key.  Attempting to force a value in a field such as this can cause errors and data corruption.
+
+Insert a new article into our articles table:
+```
+INSERT INTO articles (title, description) VALUES (‘Example Title’, ‘Example Description’)
+```
+
