@@ -50,6 +50,6 @@
    * [Serializable](storage/serializable.md)
    * [Shared Preferences](storage/shared_preferences.md)
    * [Preference Fragment](storage/preference_fragment.md)
-   * SQLite
+   * [SQLite](storage/sqlite.md)
    * [ContentProvider](storage/contentprovider.md)
 
