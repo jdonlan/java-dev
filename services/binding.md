@@ -90,3 +90,7 @@ Now that you've seen how they work, let's talk about a few odd behaviors in deal
 * If you start a service and bind to it, you cannot stop that service until you have unbinded.
 
 Lastly, if you unbind from a service, you still have access to the Binder and Service objects that were returned during binding. This is because there's no callback to say if a service unbinded successfully. Be sure that when you unbind from a service, you null out your binders and services so that you don't encounter any bugs from the service being destroyed behind the scenes, and also so you don't hold on to that memory and stop it from being cleaned up by the system properly.
+
+
+####References
+http://developer.android.com/guide/components/bound-services.html
