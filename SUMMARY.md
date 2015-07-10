@@ -77,5 +77,5 @@
    * [BroadcastReceiver](widgets/broadcastreceiver.md)
    * [System Broadcasts](widgets/system_broadcasts.md)
    * [Widgets](widgets/home_screen_widgets.md)
-   * Creating Widgets
+   * [Creating Widgets](widgets/creating_widgets.md)
 
