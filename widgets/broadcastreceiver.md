@@ -72,3 +72,4 @@ protected void onPause() {
 	unregisterReceiver(mReceiver);
 }
 ```
+
