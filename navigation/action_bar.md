@@ -21,6 +21,7 @@ Next you will ensure that the Action Bar method is implemented:
   }
 ```
 
+
 ##Elements of the Action Bar
 * The App Icon
 * Action Items
