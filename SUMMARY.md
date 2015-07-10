@@ -53,6 +53,6 @@
    * [SQLite](storage/sqlite.md)
    * [SQLite in Android](storage/sqlite_in_android.md)
    * [ContentProvider](storage/contentprovider.md)
-   * Data Retention
+   * [Data Retention](storage/data_retention.md)
 * Intents
 
