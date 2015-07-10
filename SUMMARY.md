@@ -54,5 +54,5 @@
    * [SQLite in Android](storage/sqlite_in_android.md)
    * [ContentProvider](storage/contentprovider.md)
    * [SavedInstanceState](storage/data_retention.md)
-* Intents
+* [Intents](intents/intents.md)
 
