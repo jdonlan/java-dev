@@ -72,4 +72,5 @@
    * [Pending Intents](services/pending_intents.md)
    * [Services](services/services.md)
    * [Binding to Services](services/binding.md)
+   * Intent Services
 
