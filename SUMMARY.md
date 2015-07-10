@@ -67,5 +67,5 @@
    * [Tabbed Navigation](navigation/tabbed_navigation.md)
    * [Spinner Navigation](navigation/spinner_navigation.md)
 * [Notifications and Services](services/notifications_and_services.md)
-   * Notifications
+   * [Notifications](services/notifications.md)
 
