@@ -106,5 +106,7 @@ Like with bound services, IntentService has an odd lifecycle. When startService(
 
 The other big thing to note with an IntentService is that you shouldn't override the onStartCommand() method. The superclass version of this method handles the creation of the worker threads and passing of intents. If you alter this implementation, your service won't work.
 
-
-
+####References
+https://developer.android.com/training/run-background-service/create-service.html
+http://developer.android.com/reference/android/app/IntentService.html
+http://developer.android.com/reference/android/os/ResultReceiver.html
