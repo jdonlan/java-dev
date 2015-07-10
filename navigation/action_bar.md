@@ -73,7 +73,7 @@ In the XML code above, the settings icon is set to always show in the action ite
   }
 ```
 
-###Split Action Bar
+##Split Action Bar
 Split action bar provides a separate bar at the bottom of the screen to display items so that the navigation items and the title can be displayed in a reasonable amount of space.
 
 See the XML definition below used for split action (API 14 and higher)
