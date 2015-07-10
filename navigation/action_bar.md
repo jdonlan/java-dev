@@ -54,7 +54,7 @@ The action overflow int he action bar provides access to the app's less frequent
 
 In the XML code above, the settings icon is set to always show in the action items. The search icon is set to show if there is room in the action items, and there's isn't room, to display in the overflow items.
 
-###Handling an action bar selection
+##Handling an action bar selection
 ```
 @Override
   public boolean onOptionsItemSelected(MenuItem item) {
