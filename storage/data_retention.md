@@ -62,15 +62,17 @@ public void onCreate(Bundle _savedInstanceState) {
 }
 ```
 
-Lastly, from this point on, you should be using fragments to create your applications. To save state when using fragments, you would override the same onSaveInstanceState() method, only within the fragment class this time. Then, instead of restoring state in onCreate(), you instead restore your fragment state in onActivityCreated(). For our MyFragment class that we referenced above, we could save state as shown below.
+As you should be using fragments whenever possible, you will need to save states when fragments are altered. When using fragments, you would override the same onSaveInstanceState() method, only within the fragment class this time. Then, instead of restoring state in onCreate(), you instead restore your fragment state in onActivityCreated(). 
 
+For our MyFragment class that we referenced above, we could save state as shown below.
+
+```
 private static final String SAVE_NAME = "MyFragment.SAVE_NAME";
 private static final String SAVE_AGE = "MyFragment.SAVE_AGE";
   
 private String mName;
 private int mAge;
 
-```
 @Override
 protected void onSaveInstanceState(Bundle _state) {
 	super.onSaveInstanceState(_state);
