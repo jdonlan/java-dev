@@ -102,3 +102,9 @@ protected void onCreate(Bundle savedInstanceState) {
     actionBar.setDisplayHomeAsUpEnabled(true);
 }
 ```
+
+
+####References
+http://developer.android.com/guide/topics/ui/actionbar.html
+https://developer.android.com/design/patterns/actionbar.html
+https://developer.android.com/training/basics/actionbar/index.html
