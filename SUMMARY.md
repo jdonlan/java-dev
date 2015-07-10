@@ -70,4 +70,5 @@
 * [Notifications and Services](services/notifications_and_services.md)
    * [Notifications](services/notifications.md)
    * [Pending Intents](services/pending_intents.md)
+   * Services
 
