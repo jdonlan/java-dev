@@ -55,5 +55,5 @@
    * [ContentProvider](storage/contentprovider.md)
    * [SavedInstanceState](storage/data_retention.md)
 * [Intents](intents/intents.md)
-   * Explicit Intents
+   * [Explicit Intents](intents/explicit_intents.md)
 
