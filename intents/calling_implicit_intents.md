@@ -36,3 +36,4 @@ startActivity(Intent.createChooser(viewIntent, "Open with..."));
 
 ####References
 http://developer.android.com/guide/components/intents-filters.html#ExampleSend
+http://developer.android.com/guide/components/intents-common.html
