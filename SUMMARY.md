@@ -65,4 +65,5 @@
    * [Contextual Action Bar](navigation/contextual_action_bar.md)
    * [Navigation Drawer](navigation/navigation_drawer.md)
    * [Tabbed Navigation](navigation/tabbed_navigation.md)
+   * Spinner Navigation
 
