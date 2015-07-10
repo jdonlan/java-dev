@@ -71,5 +71,5 @@
    * [Notifications](services/notifications.md)
    * [Pending Intents](services/pending_intents.md)
    * [Services](services/services.md)
-   * Binding to Services
+   * [Binding to Services](services/binding.md)
 
