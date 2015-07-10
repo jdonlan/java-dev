@@ -8,6 +8,7 @@
    * [Activities](getting_started/activities.md)
    * [Resources](getting_started/resources.md)
    * [XML Resources](getting_started/xml_resources.md)
+   * Raw Resources
 * [Java Language](java_language/java_language.md)
    * [Data Types](java_language/datatypes.md)
    * [Methods & Functions](java_language/methods_&_functions.md)
