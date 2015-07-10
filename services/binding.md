@@ -82,7 +82,7 @@ public class MainActivity extends Activity implements ServiceConnection {
 
 It's important to note that you should not attempt to unbind from a service if you're not already bound as attempting to do so will throw an IllegalArgumentException. Also, since bound services can't stop while bound, don't try calling stopService() while your service is bound as nothing will happen and it'll be hard to debug.
 
-##About Bound Services
+##Considerations with Bound Services
 Now that you've seen how they work, let's talk about a few odd behaviors in dealing with bound services. The first thing is, you don't have to explicitly start a service before binding to it. If you attempt to bind to a service that hasn't been started, the system will start the service for you. Then, when you unbind from the service, the service will stop itself. However, if you start a service, then bind to it, you cannot stop the service unless you unbind. So if you start, bind, then attempt to stop, nothing will happen. However, when you unbind from that service, the stop command will then be processed and the service will stop. If you were to start a service, bind, and unbind without calling stop, the service would continue running until it was stopped. So to recap:
 
 * Unbinding will stop bound services that haven't been started.
