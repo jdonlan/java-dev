@@ -53,4 +53,5 @@
    * [SQLite](storage/sqlite.md)
    * [SQLite in Android](storage/sqlite_in_android.md)
    * [ContentProvider](storage/contentprovider.md)
+* Intents
 
