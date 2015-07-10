@@ -1,1 +1,4 @@
 #Services
+Whenever a user closes an application or sends it to the background, the activities in the app stop running. There will be times, though, when you want some functionality to continue running, even when the app is closed. Earlier in this book, we explored how Activities can start threads and tasks to run on background threads. In order to perform any kind of true background operation in this manner, without an activity, we need to use a service.
+
+A service is a core application component that doesn't provide any sort of user interface. Services are used to perform long running operations that are meant to continue running, even after the starting application has closed. For example, if you start playing music in an activity and it closes, the music stops. However, if you start playing music in a service, and the activity on top closes, the music will keep on playing.
