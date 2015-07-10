@@ -13,7 +13,5 @@ Now, when the user saves a new movie in the form, where do we go? We could start
 
 Creating natural navigation using the activity back stack is very important. When your app first launches, the user will see your main screen. From then on out, the user will expect the back button to close the app if they are on that screen. If you create circular navigation, or multiple instances of a single activity on the back stack, this will lead to a confusing user experience. Additionally, having multiple instances of the same activity on the stack when they're not needed can lead to serious memory leaks.
 
-For more information about how the back stack works, especially in the instance of having activities from multiple apps on the same stack, read the Tasks and Back Stack reference on the Android developer site that's linked in the references section.
-
 ####References
 http://developer.android.com/guide/components/tasks-and-back-stack.html
