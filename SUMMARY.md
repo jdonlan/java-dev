@@ -73,4 +73,5 @@
    * [Services](services/services.md)
    * [Binding to Services](services/binding.md)
    * [Intent Services](services/intent_services.md)
+* Widgets and BroadCast Receivers
 
