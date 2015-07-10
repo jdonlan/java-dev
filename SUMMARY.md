@@ -64,5 +64,5 @@
    * [Action Bar](navigation/action_bar.md)
    * [Contextual Action Bar](navigation/contextual_action_bar.md)
    * [Navigation Drawer](navigation/navigation_drawer.md)
-   * Tabbed Navigation
+   * [Tabbed Navigation](navigation/tabbed_navigation.md)
 
