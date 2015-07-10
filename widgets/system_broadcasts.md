@@ -1,23 +1,6 @@
 #System Broadcasts
 The Android system is capable of sending several protected broadcasts that present information about changes in the device status. Intents using these actions cannot be broadcasted from within your app as they're reserved by the system for broadcasting changes in device status. While we can't send broadcasts of these types, it is still possible to setup our receivers to listen for these broadcasts. Below are a few of the system broadcasts, descriptions of what data they contain, and when you would use each.
 
-##
-31
-JUL
-STATUS
-Overview
-Downloads
-Submit
-Comments
-Overview
-The Android system is capable of sending several protected broadcasts that present information about changes in the device status. In this lesson, we'll talk about some of the different system broadcasts and how you can listen for those broadcasts in your applications.
-
-Objectives & Outcomes
-Upon completion of this lesson, the student should:
-Be able to identify protected system broadcast events and what each is used for.
-Instructions
-As mentioned in a previous lesson, the Android SDK provides several protected broadcast intent actions. Intents using these actions cannot be broadcasted from within your app as they're reserved by the system for broadcasting changes in device status. While we can't send broadcasts of these types, it is still possible to setup our receivers to listen for these broadcasts. Below are a few of the system broadcasts, descriptions of what data they contain, and when you would use each.
-
 ##ACTION_TIME_TICK
 The [ACTION_TIME_TICK](http://developer.android.com/reference/android/content/Intent.html#ACTION_TIME_TICK) broadcast intent is sent whenever the current time has changed on the device. This is only sent once per minute as to not kill a device's battery by firing every second. Additionally, apps can only register to receive this intent through a receiver that is registered in code. This intent cannot be applied to an intent filter that is declared in the manifest as that would cause the app to wake up once per minute, every minute, regardless of whether or not the app was running. This would be a huge drain on the battery so it has been disabled by the Android system. This intent would be used if you wanted to show the current time in your app and always have that time shown as up to date.
 
