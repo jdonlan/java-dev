@@ -85,7 +85,7 @@ See the XML definition below used for split action (API 14 and higher)
 </activity>
 ```
 
-###Enabling the App Icon for Up navigation
+##Enabling the App Icon for Up navigation
 The Up navigation allows the user to navigate between screens. For example with a Master/Detail design, the app would have a Master view with a list of items and a Detail view with data related to the list item selected on the Master view. After the user selects the list item and is viewing the Details, the Up navigation brings the user back to the list on the Master view.
 
 To enable the app icon as an Up button, call setDisplayHomeAsUpEnabled().
