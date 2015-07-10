@@ -59,5 +59,5 @@
    * [Extras](intents/extras.md)
    * [Activity Stack](intents/activity_stack.md)
    * [Calling Implicit Intents](intents/calling_implicit_intents.md)
-   * Handling Implicit Intents
+   * [Handling Implicit Intents](intents/handling_implicit_intents.md)
 
