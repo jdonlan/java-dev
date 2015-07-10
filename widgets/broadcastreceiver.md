@@ -73,3 +73,11 @@ protected void onPause() {
 }
 ```
 
+Now that we've setup our receiver to listen for intents that use our custom action, either through the manifest or in code, anytime we send a broadcast of that type, our receiver will get a callback to onReceive(). There are a few important things to note about how broadcasts are received and processed. First of all, broadcasts are sent asynchronously. Therefore, if you send a broadcast, it doesn't immediately get handled by the receiver. The system usually takes a couple cycles of the main thread before the broadcast makes it to the receiver. This works very much like binding to a service where it appears to be immediate, but it doesn't actually happen right away in code.
+
+Another important thing to note is that the onReceive() method of any receiver is executed on the main thread. That means that you shouldn't be doing any sort of long running operations when receiving a broadcast. Additionally, if the receiver is listening for intents through being registered in the manifest, the receiver will be destroyed each time onReceive() finishes executing. That means that you can't do any sort of asynchronous functionality and returning in a receiver that's registered in the manifest. For receivers registered in code, the receiver exists as long as you hold onto the reference to that receiver (mReceiver in the above example). As a matter of best practice, receivers registered either way shouldn't process asynchronous operations. If a large operation needs to be performed in the background, the receiver should start a service that can handle that operation so that the receiver can continue to listen for and process new broadcasts.
+
+####References
+http://developer.android.com/reference/android/content/BroadcastReceiver.html
+http://developer.android.com/reference/android/content/Intent.html
+http://developer.android.com/reference/android/content/IntentFilter.html
