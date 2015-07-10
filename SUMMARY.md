@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-   * Notifications and Services
 * [Getting Started with Android](getting_started/gettingstartedwithandroid.md)
    * [Creating a Project with Android Studio](getting_started/creating_a_project_with_android_studio.md)
    * [Organization](getting_started/organization.md)
