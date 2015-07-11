@@ -79,4 +79,5 @@
    * [Widgets](widgets/home_screen_widgets.md)
    * [Creating Widgets](widgets/creating_widgets.md)
    * [Collection Widgets](widgets/collection_widgets.md)
+* Device Features and APIs
 
