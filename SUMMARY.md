@@ -80,5 +80,5 @@
    * [Creating Widgets](widgets/creating_widgets.md)
    * [Collection Widgets](widgets/collection_widgets.md)
 * [Device Features and APIs](device/device_features_and_apis.md)
-   * Camera
+   * [Camera](device/camera.md)
 
