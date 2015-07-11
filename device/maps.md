@@ -14,3 +14,14 @@ Now that we've found the debug key, we need to get the fingerprint of it. To do 
 
 ![](maps_key_2.png)
 
+The full list of steps and commands to run:
+
+Command - "cd ~/.android" - press return.
+Command - "ls" - press return.
+Verify that you have a debug.keystore or debug.jks file.
+Command - "keytool -list -v -keystore debug.keystore" - press return.
+When prompted for password, enter "android" and press return. If that does not work, rerun the above command and enter no password.
+Copy down the certificate finger print labeled "SHA1" for future reference.
+If you have a release key that you use for assignment submissions, be sure to get the fingerprint for your release key as well. In the terminal window, you would navigate to your release key by typing "cd " and dragging the containing folder into the terminal window and pressing return. Type "ls" and press enter to ensure you can see your release key in the folder. Then, run the command from step four replacing "debug.keystore" with the name of your signing key. The password for your release keystore will be whatever you set it to be when you created the key. If you don't remember the password, you'll have to generate a new key.
+
+Now that we have our package name and our signing key fingerprint(s), we can generate an API key to use for Google Maps. To start, visit [https://code.google.com/apis/console/](https://code.google.com/apis/console/) and login to the Google Account you wish to use for development. Once you login, you should see a large "Create project..." button in the middle of the page. Click that button.
