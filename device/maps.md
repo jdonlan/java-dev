@@ -97,3 +97,5 @@ Now that all of that setup is out of the way, we can finally start working on ou
 </manifest>
 ```
 
+Once the manifest is setup, we can start creating our map. To do this, we need to create a subclass of MapFragment. Fragments are an especially important part of building Android applications and Google reinforces this by making their maps available, only by using a MapFragment. There is a MapView object as well, but its use is not recommended with Google Maps v2. When using a MapFragment, be sure not to override onCreateView() as the parent class uses this method to instantiate the map for this fragment. Instead, you should focus entirely on onAttach() for interface communication and onActivityCreated() for any necessary setup. By simply creating this fragment and adding it to our activity, we should be able to view a map on screen. However, this map will be zoomed out and focused on the point where the prime meridian and the equator intersect, or zero degrees latitude and longitude. This isn't very useful, so let's take a look at how we can move this around.
+
