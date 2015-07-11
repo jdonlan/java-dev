@@ -83,4 +83,5 @@
    * [Camera](device/camera.md)
    * [Location Services](device/location_services.md)
    * [Sensors](device/sensors.md)
+   * Maps
 
