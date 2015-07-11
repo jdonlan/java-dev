@@ -103,3 +103,35 @@ Once the manifest is setup, we can start creating our map. To do this, we need t
 
 By default, the user can pan around your map using swipe gestures, zoom in using pinch gestures, or rotate the map by turning it with two fingers. In addition to those interactions, we can also move the map around using the concept of a camera that can pan left, right, up, and down as well as zoom in and out. To do this, we must first get an instance of our map using the getMap() method of our fragment which returns a GoogleMap object. Then, on our map, we can call animateCamera() and pass in a camera animation. To create a camera animation, we use the CameraUpdateFactory and call any one of the static methods for different camera animations. We'll zoom into Full Sail on the map so we'll use the newLatLngZoom() method which takes in a latitude and longitude, LatLng, object and a zoom level. Seventeen is a fairly high zoom level that should allow you to see the buildings on campus, so we'll start with that.
 
+```
+@Override
+public void onActivityCreated(Bundle savedInstanceState) {
+	super.onActivityCreated(savedInstanceState);
+	GoogleMap map = getMap();
+	map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(28.590647, -81.304510), 17));
+}
+```
+
+Now that we can see the building, let's put a map marker on it. Map markers are the pins that you would see on a map that represent a saved location. All markers have a position represented by a LatLng object as well as a title that shows up when the marker is clicked. Markers are created with a MarkerOptions object and added to the map by calling the addMarker() method of the map. The addMarker() method returns a Marker object that represents the newly added marker. Let's mark Full Sail on the map with a map marker.
+
+```
+@Override
+public void onActivityCreated(Bundle savedInstanceState) {
+	super.onActivityCreated(savedInstanceState);
+	GoogleMap map = getMap();
+	map.addMarker(new MarkerOptions()
+		.position(new LatLng(28.590647,-81.304510))
+		.title("MDVBS Faculty Offices"));
+	map.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(28.590647, -81.304510), 17));
+}
+```
+
+![](map_marker.png)
+
+The bit of text that pops up when a marker is clicked is called the info window. By default, the info window shows a TextView with the title of the marker. However, we can customize what this info window looks like by creating an InfoWindowAdapter. The InfoWindowAdapter interface defines two methods, getInfoContents() and getInfoWindow(). The getInfoContents() method defines what shows up inside the speech bubble looking info window. The getInfoWindow() method defines what the window background looks like. You can add an InfoWindowAdapter to a GoogleMap object using the setInfoWindowAdapter() method.
+
+Additionally, you can also capture when the info window is clicked. By default, nothing happens when the info window is clicked, but we can change that using an OnInfoWindowClickListener which defines a simple onInfoWindowClicked() method. The clicked method takes in a map marker which you can then use to identify which marker was clicked.
+
+The last big thing we can do with a map, is get actual map clicks. When the user clicks on a map, we can trap these clicks using an OnMapClickListener and overriding the onMapClick() method. The onMapClick() method, when triggered, will return to you a LatLng object that represents where the user clicked. With this LatLng object you could either pan to that location using the camera or even create a marker to represent that location.
+
+
