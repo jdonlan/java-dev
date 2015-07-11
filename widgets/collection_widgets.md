@@ -193,4 +193,4 @@ public class CollectionWidgetProvider extends AppWidgetProvider {
 }
 ```
 
-    
+If you've followed along with all of the steps properly, your collection widget should be showing up with a list of five articles. There are lots of little things that could go wrong in building a collection widget so make sure that, in addition to following along with this process, you also download and dig through the supplied example project. Try altering the widget UI to also have control buttons. Maybe make the data in the list dynamic and try updating the list. 
