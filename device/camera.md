@@ -50,3 +50,32 @@ Now that we've defined our output file and launched our intent, the user will be
 
 Once the user has taken their picture, we can then handle that picture back in our activity (or fragment) using the onActivityResult() method. In that method, we'd look for our request code and check to make sure that the camera returned RESULT_OK. If the camera returns anything other than RESULT_OK, we'll do nothing. If the camera does return properly, there are two possible steps that we could take next. If we requested a thumbnail, the camera will return that thumbnail to our app as an extra named "data". We can get that extra, cast it to a Bitmap, and use it however we see fit. However, if we asked for a full size image, the camera will only return a result, but no data. In that case, we would simply load the image from the file we named as our output file.
 
+```
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {		
+	if(requestCode == REQUEST_TAKE_PICTURE && resultCode != RESULT_CANCELED) {
+		if(data == null) {
+			mImageView.setImageBitmap(BitmapFactory.decodeFile(mImageUri.getPath()));
+		} else {
+			mImageView.setImageBitmap((Bitmap)data.getParcelableExtra("data"));
+		}
+	}
+}
+```
+
+##Adding to the Gallery
+The final thing we would want to do after taking our picture, is adding that image to the system's gallery. You would think that just by saving our image in the gallery directory, that our image would be added. However, this is not the case due to how Android stores files in external storage.
+
+Android's external storage is accessed using MTP or Media Transfer Protocol. MTP allows the Android system to grant certain applications access to certain types of files, regardless of the underlying file system and permissions. In order for the system to read your file using MTP, it first needs to know that it exists. To let the system know that your file exists, you need to scan the file using the media scanner. To do this, we create a new intent using the ACTION_MEDIA_SCANNER_SCAN_FILE action, give it the URI of the file to scan, and send it as a broadcast. The media scanner will receive this broadcast in the background, scan the file, and refresh the MTP reader on the device. Then, your photo will show up in the gallery along with all the other images on the device.
+
+```
+private void addImageToGallery(Uri imageUri) {
+	Intent scanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+    scanIntent.setData(imageUri);
+    sendBroadcast(scanIntent);
+}
+```
+
+####References
+http://developer.android.com/training/camera/photobasics.html
+http://developer.android.com/guide/topics/media/camera.html
