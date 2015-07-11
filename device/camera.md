@@ -8,5 +8,10 @@ There are two ways to integrate the camera into an Android app, internal and ext
 
 The very first thing we need to do is tell the system what our app does and what capabilities are required. We'll be storing our images in external storage, so we'll need to request the READ_EXTERNAL_STORAGE and WRITE_EXTERNAL_STORAGE permissions in order for our saving/retrieving to work. Our app is also going to require the use of the camera. While it might seem like a given that all devices will have a camera, that's not entirely true. Android is being installed in TVs, cars, computers, and even game consoles. Most of those devices aren't going to have a camera available. In order to tell the system that our app needs a camera, or else it can't install, we use the &lt;uses-feature&gt; tag in the manifest. This goes inside the &lt;manifest&gt; tag, but outside the &lt;application&gt; tag.
 
+```
+<uses-feature android:name="android.hardware.camera"
+    android:required="true" />
+```
+
 
 
