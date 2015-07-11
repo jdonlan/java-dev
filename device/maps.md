@@ -134,4 +134,7 @@ Additionally, you can also capture when the info window is clicked. By default, 
 
 The last big thing we can do with a map, is get actual map clicks. When the user clicks on a map, we can trap these clicks using an OnMapClickListener and overriding the onMapClick() method. The onMapClick() method, when triggered, will return to you a LatLng object that represents where the user clicked. With this LatLng object you could either pan to that location using the camera or even create a marker to represent that location.
 
+###References
+https://developers.google.com/maps/documentation/android/start
+https://developer.android.com/reference/com/google/android/gms/maps/package-summary.html
 
