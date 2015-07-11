@@ -82,5 +82,5 @@
 * [Device Features and APIs](device/device_features_and_apis.md)
    * [Camera](device/camera.md)
    * [Location Services](device/location_services.md)
-   * Sensors
+   * [Sensors](device/sensors.md)
 
