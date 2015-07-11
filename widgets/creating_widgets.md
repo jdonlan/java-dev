@@ -202,8 +202,6 @@ public class ConfigActivity extends Activity implements OnClickListener {
 
 Once you've followed all of the above steps, you should have a working home screen widget that simply shows the app icon and opens up the configuration activity when clicked. This is the absolute simplest widget that you could create in Android. From here, you would change your widget UI to show the data you wanted to show, change your onUpdate() method to update your widget with relevant data, and change your configuration activity to provide the user with actionable options for configuring what's shown in the widget.
 
-Included in this lesson is a project containing the above example code. Feel free to take this project, move things around, change things, and ultimately create your own working widget from it. Once you feel comfortable altering simple widgets, continue on to working with collection widgets.
-
 ####References
 https://developer.android.com/guide/topics/appwidgets/index.html
 https://developer.android.com/guide/practices/ui_guidelines/widget_design.html
