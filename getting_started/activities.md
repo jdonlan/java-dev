@@ -4,7 +4,7 @@ Activities are a core building block for almost any Android application. In this
 The Activity class is a core building block of almost every Android application. On the surface, an Android activity is a simple application screen that contains a UI and some functionality that's tied to that UI. Activities are typically full screen, though it is possible to make floating or windowed activities, and the UI on that screen should allow for user input to create an interactive experience. If you dive a little deeper though, activities are so much more than a simple screen with some UI. Activities can respond to system events, connect to content databases, and launch other apps or system components. The more advanced topics will be introduced in a later sections. For now, we'll stick with the simple screen definition of an activity.
 
 ##Creating an Activity
-If you followed the steps outlined in the project creation lessons for creating a new Android project, you should have an activity in your project named MainActivity. The project creation wizard is a great way to setup your first activity with all the necessary initialization taken care of for you.
+If you followed the steps outlined in the project creation topics, you should have an activity in your project named MainActivity. The project creation wizard is a great way to setup your first activity with all the necessary initialization taken care of for you.
 
 The first thing you'll need to do to create a new Activity is to create a new class and have it extend Activity (more on extending classes later in the month). By extending Activity, you're saying that this new class is a type of Activity. You can see how to do this by examining your MainActivity class.
 

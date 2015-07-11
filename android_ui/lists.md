@@ -2,9 +2,7 @@
 
 A very common UI pattern for displaying a group of related data is to show that data in a vertically scrolling list. To achieve this type of list display, you would use a ListView. The Android ListView is a special type of view group known as an AdapterView. Unlike other view groups where the views contained within are all determined via a layout file, such is the case with LinearLayout, an AdapterView creates its views on the fly based off the data contained within an adapter.
 
-When using a ListView in your app, there are four components that we need to focus on: the ListView which will be used to show the list of data, the list item layout which will represent each row in the list, the collection of data to show in the list, and the adapter which hooks everything up. We'll go into each of these below with the exception of the adapter since that will be covered more in a later lesson.
-
-*Note: In this lesson, you'll see a class called ArrayAdapter being used. For more on this and other types of adapters, see the section on adapter events and callbacks. For now, think of adapters as factories that take in a collection of data and return a list of views that represent that data.*
+When using a ListView in your app, there are four components that we need to focus on: the ListView which will be used to show the list of data, the list item layout which will represent each row in the list, the collection of data to show in the list, and the adapter which hooks everything up. We'll go into each of these below with the exception of the adapter since that will be covered more in a later topic.
 
 ## Components
 
@@ -54,7 +52,7 @@ The next thing we need is a collection of data to show in the list. Instead of c
 
 At this point, all we need now is a list item layout to be able to hook this all up with an adapter. Instead of making our own list item layout, we'll just use one of the built-in layouts that the Android SDK provides. You can access any of the built-in SDK layouts using the android.R class which works exactly like your own project's R class. In this example, we'll use android.R.layout.simple_list_item_1 which is a simple TextView that has some padding on it and a minimum height of 48dp to make clicking each list item easier.
 
-To hook this all up in code, we're going to use an ArrayAdapter. ArrayAdapter takes in either an array or ArrayList as the collection and an ID of the list item layout and everything is hooked up for you behind the scenes. We'll go more into how this is done in another lesson, so don't worry about that just yet. Once our adapter is hooked up with our list item layout and data collection, we need to hook up the adapter to the list. First, we fetch the list like we would any other view and assign it to a variable. Then we call setAdapter() on the ListView and pass in our adapter.
+To hook this all up in code, we're going to use an ArrayAdapter. ArrayAdapter takes in either an array or ArrayList as the collection and an ID of the list item layout and everything is hooked up for you behind the scenes. Once our adapter is hooked up with our list item layout and data collection, we need to hook up the adapter to the list. First, we fetch the list like we would any other view and assign it to a variable. Then we call setAdapter() on the ListView and pass in our adapter.
 
 ```
 public class MainActivity extends Activity {
@@ -76,7 +74,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-At this point, you should be able to run the app and see the data in the list as seen below. For now, our list items are very simple and only contain a single line of text. This is a limitation of the type of adapter we chose to use. To learn how to create more complex list items, read the lesson on Adapter Events and Callbacks.
+At this point, you should be able to run the app and see the data in the list as seen below. For now, our list items are very simple and only contain a single line of text. This is a limitation of the type of adapter we chose to use. To learn how to create more complex list items, read the section on Adapter Events and Callbacks.
 
 ![](lv_example.png)
 

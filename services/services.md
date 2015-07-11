@@ -1,10 +1,10 @@
 #Services
 Whenever a user closes an application or sends it to the background, the activities in the app stop running. There will be times, though, when you want some functionality to continue running, even when the app is closed. Earlier in this book, we explored how Activities can start threads and tasks to run on background threads. In order to perform any kind of true background operation in this manner, without an activity, we need to use a service.
 
-A service is a core application component that doesn't provide any sort of user interface. Services are used to perform long running operations that To create a service in your app, you need to extend the Service class or one of its subclasses. Once you extend the Service class, you must also override the onBind() method. The onBind() method is used only in bound services, which we'll cover in another lesson, so we can ignore that for now and just have it return false.are meant to continue running, even after the starting application has closed. For example, if you start playing music in an activity and it closes, the music stops. However, if you start playing music in a service, and the activity on top closes, the music will keep on playing.
+A service is a core application component that doesn't provide any sort of user interface. Services are used to perform long running operations that are meant to continue running, even after the starting application has closed. For example, if you start playing music in an activity and it closes, the music stops. However, if you start playing music in a service, and the activity on top closes, the music will keep on playing.
 
 ##Declaring a Service
-To create a service in your app, you need to extend the Service class or one of its subclasses. Once you extend the Service class, you must also override the onBind() method. The onBind() method is used only in bound services, which we'll cover in another lesson, so we can ignore that for now and just have it return false.
+To create a service in your app, you need to extend the Service class or one of its subclasses. Once you extend the Service class, you must also override the onBind() method. The onBind() method is used only in bound services, so we can ignore that for now and just have it return false.
 
 ```
 public class SimpleService extends Service {
@@ -21,7 +21,7 @@ public class SimpleService extends Service {
 Because services are a core application component, they also need to be registered inside of the manifest in order to use them, just like activities. You can register a new service in the manifest using the <service> tag and providing the fully qualified name, or the shortcut name if you prefer, of the service. It's also a good idea to say whether or not your service can be exported. Exporting a service allows other applications to utilize your service, provided they know the package name of your Service class. The services we build in this class won't be exported, so go ahead and set this value to false.
 
 ```
-<service android:name="com.fullsail.android.SimpleService"
+<service android:name="com.company.android.SimpleService"
 	android:exported="false" />
 ```
 
@@ -78,7 +78,7 @@ It's important to note that, like activities, services extend from the Context c
 
 Another very important thing to keep in mind is how threading is handled in regards to a service. Services run "in the background" but they don't actually run on a background thread. As it was mentioned in a previous course, all application code runs on the main thread by default. The same is true for services. If you have a service and an activity running in the same app, at the same time, then they will share the same main thread and any long running operations happening in the service will slow down the activity's UI.
 
-When a service is said to run "in the background," it's meant that they can run without the app being open, not that they run on a separate thread. However, much like activities, you can start background or worker threads from a service. Additionally, there is another type of service we'll talk about this week called an IntentService, which can be used to do background work in a background thread. More on that in another lesson.
+When a service is said to run "in the background," it's meant that they can run without the app being open, not that they run on a separate thread. However, much like activities, you can start background or worker threads from a service. Additionally, there is another type of service we'll talk about this week called an IntentService, which can be used to do background work in a background thread.
 
 Lastly, any service running in the background can be killed by the system at any time. The system targets services that are running in the background, that aren't bound, and have been running for a long time to kill first. For most services, this is fine as the system will restart your service if it's labeled as sticky whenever it has the resources to do so again. When the service is restarted, onStartCommand() will be called again and your service will receive the last intent that started the service again.
 

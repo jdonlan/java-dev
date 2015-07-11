@@ -13,4 +13,4 @@ Other activities may expect data to be returned. For example, a contact manager 
 
 And yet other activities might need custom data functionality from a separate component from within the same application. For example, an application might have a primary activity, but also support user preferences. The user preferences would then be updated in a separate activity and saved, then the application focus would need to revert to the primary activity.
 
-Intents are the vehicle that request operations from the system and carry the data back and forth between activities at launch and completion in each of these situations. They carry the data through a Bundle object using a key value system similar to objects. See the explicit and implicit intent lessons for more information.
+Intents are the vehicle that request operations from the system and carry the data back and forth between activities at launch and completion in each of these situations. They carry the data through a Bundle object using a key value system similar to objects.

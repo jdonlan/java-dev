@@ -17,7 +17,7 @@ Generics also help to cut down on bugs by giving everything a strong type which 
 While generics are great for creating classes that accept multiple types, the passed in type must be an object type. Primitive types (boolean, char, short, int, long, float, double, and byte) cannot be passed in as a generic type. If you want to pass in one of these types, use the object type associated with the primitive you want to use (the one with the capital letter).
 
 ##Creating a Generic Class
-Generic classes are incredibly useful and the Android SDK contains several generic classes that provide for a wide range of functionality. However, you might want to also create your own generic classes to contain your own generic functionality. In this lesson we'll cover the basics of creating a generic class without going too in-depth. The reasoning for this is, you will very rarely have to create your own generic class and, once you know the basics, the more advanced features of generics are fairly intuitive.
+Generic classes are incredibly useful and the Android SDK contains several generic classes that provide for a wide range of functionality. However, you might want to also create your own generic classes to contain your own generic functionality. Here, we'll cover the basics of creating a generic class without going too in-depth. The reasoning for this is, you will very rarely have to create your own generic class and, once you know the basics, the more advanced features of generics are fairly intuitive.
 
 The first thing we need to create a generic is a simple class definition as seen below.
 

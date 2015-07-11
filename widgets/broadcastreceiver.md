@@ -13,7 +13,7 @@ If you want to send data to other app components using a broadcast intent, you n
 ```
 // Assuming we're in an activity.
 public static final String ACTION_CUSTOM =
-	"com.fullsail.android.ACTION_CUSTOM";
+	"com.company.android.ACTION_CUSTOM";
 ...
 Intent broadcast = new Intent(ACTION_CUSTOM);
 sendBroadcast(broadcast);

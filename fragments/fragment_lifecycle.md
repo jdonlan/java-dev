@@ -4,7 +4,7 @@ Since fragments are built to be modules that are swapped in and out as needed, t
 ![](fragment_lifecycle.png)
 
 ###onAttach(Activity)
-This method is called once when the fragment has been added to an activity using the fragment manager. The activity passed into this method is the activity that the fragment has been added to. This method is typically used to determine if the containing activity is suitable to host the fragment. More about this can be found in the fragment/activity communication lesson.
+This method is called once when the fragment has been added to an activity using the fragment manager. The activity passed into this method is the activity that the fragment has been added to. This method is typically used to determine if the containing activity is suitable to host the fragment.
 
 ###onCreate(Bundle)
 Much like with activities, this method is called to do the initial creation of the fragment. This is where you would setup any member variables and start loading any data that's needed for the fragment. Unlike with activities, you cannot access any views from this method because the UI for the fragment has not been created yet.
@@ -26,7 +26,7 @@ This method does almost the same exact thing as the activity's onResume() method
 As with an activity, the onPause() method is called when the fragment can still be seen in the app, but is no longer accepting user interaction. This could be because the containing activity has been paused or because a fragment operation is modifying the activity and contained fragments. The onPause() method should always be the first method called when a fragment is being hidden or destroyed as well.
 
 ###onStop()
-Again, as with the activity, the onStop() method is called when the fragment is no longer visible to the user. This is either because the containing activity has been stopped or the fragment is being hidden or removed via a fragment transaction. This can also occur if the fragment is pushed onto the backstack. For more about the backstack, see the lesson on using fragments.
+Again, as with the activity, the onStop() method is called when the fragment is no longer visible to the user. This is either because the containing activity has been stopped or the fragment is being hidden or removed via a fragment transaction. This can also occur if the fragment is pushed onto the backstack.
 
 ###onDestroyView()
 This method is called after onStop() and is used to clean up any lingering resources associated with a fragment's layout. When fragments are no longer visible to the user, the system saves their state so that they can be quickly rebuilt, but the views are destroyed in order to save memory. When this method is called, you can no longer access a fragment's layout and associated views. If the fragment is resumed, onCreateView() is called again followed by all other lifecycle events necessary to bring the fragment back into the foreground. If the fragment is instead removed from the activity completely, or the activity itself finishes, then the fragment will continue through the below lifecycle events to be destroyed.

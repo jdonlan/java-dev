@@ -1,6 +1,4 @@
 #Data Collections
-For many applications, you'll need to be able to create and manage groups of related objects or types. In this lesson, we'll discuss these related object groups, known as collections, and when to use each within your app.
-
 A group of related objects or types is what's known as a collection. Collections are very commonly used in applications to hold lists of data or key/value pair groupings. Each type of collection has a unique structure and its own set of rules for the type of data it can hold, how much data it can hold, and how that data is accessed. 
 
 Below are four common types of data collections along with the rules for each and best practices for when each type should be used.

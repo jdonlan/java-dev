@@ -33,7 +33,7 @@ As mentioned previously, the above intent filter is used to signify that this is
 </activity>
 ```
 	
-That's it! At this point, your activity will no longer show up as an app in the launcher drawer, but your app will instead show up in the chooser dialog when opening a web link. We can use the demo app for the lesson on handling implicit attempts (also linked in this lesson) to launch an ACTION_VIEW intent which will show our app in the chooser dialog.
+That's it! At this point, your activity will no longer show up as an app in the launcher drawer, but your app will instead show up in the chooser dialog when opening a web link. 
 
 ![](handle_implicit.png)
 

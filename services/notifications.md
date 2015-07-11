@@ -59,7 +59,7 @@ builder.setContentText("Standard Message");
 mgr.notify(STANDARD_NOTIFICATION, builder.build());
 ```
 
-If you run this code using the attached example project, you'll notice that the small icon is not exactly the same as the app icon. Notification small icons should be all white and transparency as to match the Android design guidelines. To get icons that match this style, you can use the Notification Icon Generator that's part of Android Asset Studio. This is integrated into Android Studio and can also be found at the link in the resources section of this lesson.
+If you run this code using the attached example project, you'll notice that the small icon is not exactly the same as the app icon. Notification small icons should be all white and transparency as to match the Android design guidelines. To get icons that match this style, you can use the Notification Icon Generator that's part of Android Asset Studio.
 
 Now, if we wanted to switch our notification to use an expanded style, we can add a few extra properties to our existing standard implementation. To make our notification expanded, we have to set a "Big" style to it. There are three big styles you can use to make expanded notifications, BigTextStyle, BigPictureStyle, and InboxStyle. We'll take a look at the BigTextStyle in this example, but feel free to explore the other two styles on your own.
 
@@ -90,7 +90,7 @@ If we were to show the above expanded notification, it would appear exactly as t
 
 
 ##Setting Actions on Notifications
-In addition to just showing messages, notifications also allow you to also set an action that happens when the notification is clicked or you can set some action buttons that perform certain actions when they're clicked instead of the default notification action. To set these actions, you need to create pending intents. Pending intents will be covered more in the Pending Intents lesson, so we'll just cover how to set them to a notification here.
+In addition to just showing messages, notifications also allow you to also set an action that happens when the notification is clicked or you can set some action buttons that perform certain actions when they're clicked instead of the default notification action. To set these actions, you need to create pending intents. Pending intents will be covered more in an upcoming topic, so we'll just cover how to set them to a notification here.
 
 The first type of action you can set is the default notification action. When the user clicks on a notification, something should happen. Typically, this action is to open the app that created the notification and show data that is related to the notification. For instance, if you receive a text message then you'll get a notification that has the contents of the text message. If you click on that notification, you're taken to the text messaging app and right into the conversation shown on the notification. Your actions should always have that sort of context.
 
