@@ -22,7 +22,7 @@ For instance, the Android SmsManager allows apps to send text messages without u
 ###&lt;activity&gt; - recommended
 The activity tag is contained within the application tag and is used to define the different activities in your app and contains key data such as the class name of the activity class, the label to be shown on the activity, the icon to be associated with this activity if different from the application icon, as well as any UI options that are specific to this one activity. This tag is not required since not every app has a visual component to it, but almost every single app has some sort of UI that is part of an activity.
 
-There are several other tags that can be found in an app's manifest file which can be found in the Android Developer documentation.
+There are several other tags that can be found in an app's manifest file which can be found in the Android Developer documentation as well as future sections of this text.
 
 ####References
 [http://developer.android.com/guide/topics/manifest/manifest-intro.html](http://developer.android.com/guide/topics/manifest/manifest-intro.html)
