@@ -15,14 +15,11 @@ It's good to remember that the max index for an array is always one less than th
 // Uninitialized array of unknown length
 int[] arrayOfInts;
 // Empty array of length 10
-// Looks like {0,0,0,0,0,0,0,0,0,0}
-arrayOfInts = new int[10];
+arrayOfInts = new int[10]; // Looks like {0,0,0,0,0,0,0,0,0,0}
 // Accessing the first element in the array
-// Looks like {1,0,0,0,0,0,0,0,0,0}
-arrayOfInts[0] = 1;
+arrayOfInts[0] = 1; // Looks like {1,0,0,0,0,0,0,0,0,0}
 // Accessing the tenth element in the array
-// Looks like {1,0,0,0,0,0,0,0,0,2}
-arrayOfInts[9] = 2;
+arrayOfInts[9] = 2; // Looks like {1,0,0,0,0,0,0,0,0,2}
 // Uninitialized array of unknown length
 String[] arrayOfStrings;
 // Initialized array of unspecified length but known elements
@@ -30,8 +27,7 @@ arrayOfStrings = new String[] {
 	"Hello", "New", "Java", "Students"
 };
 // Getting the length of an array
-// Array length here is 4
-int stringArrayLength = arrayOfStrings.length;
+int stringArrayLength = arrayOfStrings.length; // Array length here is 4
 ```
 
 ##Lists
