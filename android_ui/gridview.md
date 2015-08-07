@@ -65,7 +65,7 @@ The last thing we'll need before hooking this all up with an adapter is a grid i
     tools:ignore="ContentDescription" />
 ```
 
-To hook all this up, we'll need to use a custom adapter that can handle image identifiers, as covered in the adapters section of this book.
+To hook all this up, we'll need to use a custom adapter that can handle image identifiers, as covered in the adapters section of this chapter.
 
 ```
 // The rest of our MainActivity class.
