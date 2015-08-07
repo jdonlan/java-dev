@@ -10,7 +10,7 @@ When an adapter is set to a ListView, the first thing the list does is ask how m
 
 After all of the visible rows are created and shown, the ListView becomes functional and the user can start scrolling through the list. When the user starts to scroll, the first row in the list will eventually be pushed off the screen and a new row will show at the bottom. At this time, the ListView gives the first row layout back to the adapter since it doesn't need it anymore and requests a new row layout to represent the newly visible row at the bottom. The adapter will then either recycle the view that it got back from the list or create a new row layout and return that to the ListView to be shown as the new row. 
 
-A visual representation of this can be seen in the Google Developers video found at [https://www.youtube.com/watch?v=N6YdwzAvwOA](https://www.youtube.com/watch?v=N6YdwzAvwOA).
+A visual representation of this can be seen in the Google Developers video found at around the 5:12 minute mark - [https://www.youtube.com/watch?v=N6YdwzAvwOA](https://www.youtube.com/watch?v=N6YdwzAvwOA).
 
 ##The BaseAdapter Class
 At the core of almost every adapter is the BaseAdapter class. The BaseAdapter class contains the base functionality (hence the name) that almost every adapter needs to implement. To better understand how adapters work, it's best to understand the methods contained within the BaseAdapter class.
