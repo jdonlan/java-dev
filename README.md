@@ -5,7 +5,7 @@ Welcome to Developing for Android!  This material was curated and created as a r
 
 ## Content and Expectations
 
-Android development involves understanding the platform SDK to build upon a foundational knowledge of the Java programming language. This book will provide a refresher for the requisite Java langauge components as well as a guide into the Android SDK.  This resource will provide broad insight into the Android platform and best practices for mobile application development.  
+Android development involves understanding the platform SDK to build upon a foundational knowledge of the Java programming language. This book will provide a refresher for the requisite Java language components as well as a guide into the Android SDK.  This resource will provide broad insight into the Android platform and best practices for mobile application development.  
 
 There is an expectation that you will already have a basic understanding of Object Oriented Programming technique and the Java language.  While the material will provide a review of core Java syntax and constructs, the aim is to get into developing for Android as quick as possible.  
 
