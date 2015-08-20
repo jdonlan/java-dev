@@ -1,5 +1,5 @@
 #Android User Interface
-Layouts and views are the core components of any Android UI. In this chapter, we will discuss the different UI components and how they can be combined to create a functional user interface.  To create this UI, you'll first need to understand the core building blocks of every Android user interface; layouts and views.
+Layouts and views are the core components of any Android UI. In this chapter, we will discuss the different UI components and how they can be combined to create a functional user interface.  To create this UI, you'll first need to understand the core building blocks of every Android user interface; layouts and views. 
 
 ##Views
 
