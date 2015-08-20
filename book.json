@@ -1,6 +1,6 @@
 { 
     "title": "Developing for Android - A Developer's Guide",
     "description": "Learn Android starting with the fundamentals of the Java language and progressing through some of the more advanced SDK features.",
-    "direction": "rtl",
+    "direction": "ltr",
     "authors": "Joshua Donlan, Michael Celey"
 }
