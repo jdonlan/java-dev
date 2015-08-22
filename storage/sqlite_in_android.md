@@ -6,11 +6,11 @@ The SQLiteOpenHelper is a class that handles creating and saving of a database t
 ```
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-	private static final String DATABASE_FILE = “database.db”;
+	private static final String DATABASE_FILE = "database.db";
 	private static final int DATABASE_VERSION = 1;
 
-	private static final String CREATE_TABLE = “CREATE TABLE IF NOT EXISTS example (“ +
-		“_id INTEGER PRIMARY KEY AUTOINCREMENT, some_text TEXT)”;
+	private static final String CREATE_TABLE = "CREATE TABLE IF NOT EXISTS example (" +
+		"_id INTEGER PRIMARY KEY AUTOINCREMENT, some_text TEXT)";
 
 	public DatabaseHelper(Context c) {
 		super(c, DATABASE_FILE, null, DATABASE_VERSION);
@@ -39,13 +39,13 @@ This method takes in three parameters: table name, a null column hack, and a set
 
 ```
 ContentValues v = new ContentValues();
-v.put(“title”, “Example Title”);
-v.put(“description”, “Example Description”);
-v.put(“publish_date”, “2014-10-19 21:06”);
-v.put(“url_string”, “http://example.com”);
+v.put("title", "Example Title");
+v.put("description", "Example Description");
+v.put("publish_date", "2014-10-19 21:06");
+v.put("url_string", "http://example.com");
 
 // ID of the newly inserted row.
-long id = db.insert(“articles”, null, v);
+long id = db.insert("articles", null, v);
 ```
 
 ###update()
