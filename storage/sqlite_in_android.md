@@ -49,7 +49,7 @@ long id = db.insert("articles", null, v);
 ```
 
 ###update()
-This method takes in four parameters: table name, updated values, a WHERE clause, and WHERE arguments. The updated values parameter is a ContentValues object containing the updated column values.The WHERE clause parameter is a WHERE clause without the “WHERE” keyword. The WHERE arguments are any values you want to insert into the WHERE clause using a “?” wildcard in the WHERE text.
+This method takes in four parameters: table name, updated values, a WHERE clause, and WHERE arguments. The updated values parameter is a ContentValues object containing the updated column values.The WHERE clause parameter is a WHERE clause without the "WHERE" keyword. The WHERE arguments are any values you want to insert into the WHERE clause using a "?" wildcard in the WHERE text.
 
 ```
 String[] whereArgs = { "Filter Title",
@@ -77,8 +77,8 @@ Cursors represent a grouping of data that was returned from a database query. Th
 **get&lt;Type&gt;** - get a field value of the appropriate type.
 
 ```
-// Query for all columns and rows in “articles”
-Cursor c = db.query(“articles”, null, null, null, null, null, null, null);
+// Query for all columns and rows in "articles"
+Cursor c = db.query("articles", null, null, null, null, null, null, null);
 
 if(c == null || c.getCount() == 0) {
 	// No records
