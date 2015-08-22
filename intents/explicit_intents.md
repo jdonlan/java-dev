@@ -1,14 +1,14 @@
 #Explicit Intents
-Explicit Intents are named as such due to their nature of being explicit. When using an Explicit Intent, the application utilizes a fully qualified class name to target and request another component within an application. They are often used to launch activities, services, and broadcasts within the same Android application. Think of it like using a phone number to call specific person. You specify the number to dial, hit dial, and the telephone network connects the call. Similarly, an Explicit Intent informs Android that you are trying to access a specific application component, and Android launches the component, passing any requested data to that component in the process. Passing data between intents is handled through Extras and is covered in the section on  "Data Flow and Intent Extras."
+Explicit Intents are named as such due to their nature of being explicit. When using an explicit intent, the application utilizes a fully qualified class name to target and request another component within an application. They are often used to launch activities, services, and broadcasts within the same Android application. Think of it like using a phone number to call specific person. You specify the number to dial, hit dial, and the telephone network connects the call. Similarly, an explicit intent informs Android that you are trying to access a specific application component, and Android launches the component, passing any requested data to that component in the process. Passing data between intents is handled through Extras and is covered in the section on "Data Flow and Intent Extras."
 
 ##Building an Intent
-It is important to note that both Explicit Intents and Implicit Intents are both similar in how they are executed as they both use Android's Intent class. Explicit Intents are relatively simple to construct in their basic implementation used for requesting the start of a new Activity within an application.
+It is important to note that both explicit intents and implicit intents are both similar in how they are executed as they both use Android's Intent class. Explicit intents are relatively simple to construct in their basic implementation used for requesting the start of a new Activity within an application.
 
 ```
 Intent nextActivity = new Intent(this, NextActivity.class);
 ```
 
-In the above example, you can see that the Intent is instantiated using one of the available constructors for the Intent class. In this case, the constructor takes in 2 parameters - the Activity Context, and the target component's class respectively. In this example, the target component is another class within the same application context, and is called out by its class name, followed by the .class designator.
+In the above example, you can see that the Intent is instantiated using one of the available constructors for the Intent class. In this case, the constructor takes in two parameters - the Activity Context, and the target component's class respectively. In this example, the target component is another class within the same application context, and is called out by its class name, followed by the .class designator.
 
 ###Triggering an Intent
 Once an intent has been established, it must be triggered for Android to actually process the request and launch the corresponding component. This is done simply by calling one of two predefined methods:
