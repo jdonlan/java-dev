@@ -73,7 +73,7 @@
    * [Services](services/services.md)
    * [Binding to Services](services/binding.md)
    * [Intent Services](services/intent_services.md)
-* [Widgets and BroadCast Receivers](widgets/widgets_and_broadcast_receivers.md)
+* [Widgets and Broadcast Receivers](widgets/widgets_and_broadcast_receivers.md)
    * [BroadcastReceiver](widgets/broadcastreceiver.md)
    * [System Broadcasts](widgets/system_broadcasts.md)
    * [Widgets](widgets/home_screen_widgets.md)
