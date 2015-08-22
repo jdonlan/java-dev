@@ -16,7 +16,7 @@ Every table should contain a column which holds a unique identifier for each row
 ![](sqlite.png)
 
 ##Creating a Table
-Tables are creating using a “CREATE TABLE” statement and are named using a string value that does not contain spaces. The table name is followed by the column names and types, separated by commas, and listed within parentheses.
+Tables are creating using a "CREATE TABLE" statement and are named using a string value that does not contain spaces. The table name is followed by the column names and types, separated by commas, and listed within parentheses.
 
 Create a table of articles that stores the title, description, publish date, and the URL of the story.
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS articles (
 ##Querying a Table (SELECT)
 Queries are performed using a SELECT statement. The SELECT statement is formatted as the command SELECT, followed by the data fields (columns) in a comma separated list, followed by the table or tables that house the data.
 
-Assuming a table named “articles” and we want to fetch all article titles from a column named “title”:
+Assuming a table named "articles" and we want to fetch all article titles from a column named "title":
 
 ```
 SELECT title FROM articles
@@ -43,16 +43,16 @@ SELECT title FROM articles
 
 A SELECT statement will return all rows in a table by default. Returned rows can be filtered using a WHERE clause. WHERE statements are formatted as the command WHERE, then column name(s) a comparison operator, then column value(s).  This WHERE clause is placed after the SELECT statement as the statement tail. String values are wrapped in quotes while numerical values contain no quotes.
 
-To get all articles named “test” from the table above:
+To get all articles named "test" from the table above:
 ```
-SELECT title FROM articles WHERE title=‘test’
+SELECT title FROM articles WHERE title='test'
 ```
 
 The WHERE clause can also be filtered using a wildcard (%) and the LIKE keyword for string values. Standard <, >, <=, >=, != operators can be used for numeric values. != works for strings as well. Can combine multiple WHERE clauses with AND/OR keywords. 
 
-To get all articles starting with the word “test” or containing the word “example”:
+To get all articles starting with the word "test" or containing the word "example":
 ```
-SELECT title FROM articles WHERE title LIKE ‘test%’ OR title LIKE ‘%example%’
+SELECT title FROM articles WHERE title LIKE 'test%' OR title LIKE '%example%'
 ```
 ###Sorting Query Results
 Query results can be sorted by adding an ORDER BY statement to the end of the SELECT statement, after the WHERE clause if included. ORDER BY statements are followed by the column name and either ASC or DESC for ascending or descending order. Only  INTEGER, TEXT, or REAL columns should be used for sorting to get a reliable sort behavior.  
@@ -76,7 +76,7 @@ Data is added to a table as a new row using an INSERT INTO statement.  This stat
 
 Insert a new article into our articles table:
 ```
-INSERT INTO articles (title, description) VALUES (‘Example Title’, ‘Example Description’)
+INSERT INTO articles (title, description) VALUES ('Example Title', 'Example Description')
 ```
 
 ##Updating Table Data
@@ -84,7 +84,7 @@ Data can be updated using an UPDATE statement. Statement is formatted as UPDATE,
 
 Update the description of our example article in the articles table:
 ```
-UPDATE articles SET description=‘Changed’ WHERE title=‘Example Title’
+UPDATE articles SET description='Changed' WHERE title='Example Title'
 ```
 
 ##Deleting Table Data
@@ -92,5 +92,5 @@ Data is deleted from a table using a DELETE statement. The statement is formatte
 
 Delete our example article from the articles table:
 ```
-DELETE FROM articles WHERE title=‘Example Title’
+DELETE FROM articles WHERE title='Example Title'
 ```
