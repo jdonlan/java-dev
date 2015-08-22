@@ -9,7 +9,7 @@ Every table should contain a column which holds a unique identifier for each row
 * TEXT - Any sort of string and/or character data.
 * INTEGER - A whole number represented by an int, short, byte, or long.
 * REAL - A floating point number represented by a float or a double.
-* DATETIME - A string that represents a date formatted as “yyyy-MM-dd HH:mm”.
+* DATETIME - A string that represents a date formatted as "yyyy-MM-dd HH:mm".
 * BLOB - Raw byte data stored as a collection of bytes.
  
 ####Example Table
