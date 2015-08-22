@@ -43,7 +43,7 @@ public void onCreate(Bundle _savedInstanceState) {
 }
 ```
 
-Even if you're not using the save state bundle, it can still be useful to you. When your app is recreated after being destroyed, your app will attempt to recreate any fragments that were a part of your activity. That means that you don't need to recreate them yourself everytime your app is recreated. You can do a simple check in the onCreate() method of your activity to see if you need to add your fragments again.
+Even if you're not using the save state bundle, it can still be useful to you. When your app is recreated after being destroyed, your app will attempt to recreate any fragments that were a part of your activity. That means that you don't need to recreate them yourself every time your app is recreated. You can do a simple check in the onCreate() method of your activity to see if you need to add your fragments again.
 
 ```
 @Override
