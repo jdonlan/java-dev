@@ -43,7 +43,7 @@ public class Student {
 	}
 }
 ```
-Note* in the above example there are two occurances of public Student().  This is called method overloading, as explained below.
+Note* in the above example there are two occurrences of public Student().  This is called method overloading, as explained below.
 
 ##Calling Methods
 Once your method has been declared, you're ready to start calling those methods. The first thing you need to do is get a new instance of the class that contains the methods you want to call. You can do this by using the new keyword and the class's constructor as seen below. Once you have your class instance, or object, you can call your methods using the name of the object, followed by a dot, followed by the name of the method and any parameters.
