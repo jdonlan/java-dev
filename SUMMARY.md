@@ -11,7 +11,7 @@
    * [Static](java_language/static.md)
    * [Object Oriented Programming](java_language/object_oriented_programming.md)
    * [Objects & Classes](java_language/objects_&_classes.md)
-   * [Comperators](java_language/comperators.md)
+   * [Comparators](java_language/comparators.md)
    * [Collections](java_language/collections.md)
    * [Generics](java_language/generics.md)
    * [Interfaces](java_language/interfaces.md)
