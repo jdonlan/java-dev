@@ -29,12 +29,12 @@ Next you will ensure that the Action Bar method is implemented:
 
 ###The App Icon
 
-This is the image at the top of the action bar that represents the app and can be enabled to act as the 'Up" navigation.
+This is the image at the top of the action bar that represents the app and can be enabled to act as the "Up" navigation.
 
 ###Action Items
 The action bar allows the user to navigate through the use of the action items. These items appear directly in the action bar with an icon or text known as the action buttons. Those actions that cannot fit in the action bar or are considered lower priority show up in the action overflow. This is accessible by the button on the far right of the action bar that has 3 dots in a vertical line.
 
-To define the action items, you must implement an xml defintion in the menu directory in the resources.
+To define the action items, you must implement an xml definition in the menu directory in the resources.
 
 ```
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
