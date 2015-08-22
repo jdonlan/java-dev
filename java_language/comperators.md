@@ -1,7 +1,7 @@
-#Comperators
-Alongside custom classes come custom comperators.  A comperator is simply an operation that compares two or more values, often with the purpose of sorting. 
+#Comparators
+Alongside custom classes come custom comparators.  A comparator is simply an operation that compares two or more values, often with the purpose of sorting. 
 
-Using the Employee class example, we may want to compare two employees by their Employee ID.  As Employee is a custom class, Java has no default way to compare two instances of an employee object in such a way.  To accomplish this, we would need to write a custom comperator as shown below:
+Using the Employee class example, we may want to compare two employees by their Employee ID.  As Employee is a custom class, Java has no default way to compare two instances of an employee object in such a way.  To accomplish this, we would need to write a custom comparator as shown below:
 
 
 ```
@@ -22,7 +22,7 @@ Comparator<Employee> comp = new Comparator<Employee>() {
 };
 ```
 
-Comparing two employees by their ID becomes an easy feat with the comperator in place.  As you can see, the comperators return a fixed integer of -1, 1, or 0 which is expected by the Java runtime to define order.
+Comparing two employees by their ID becomes an easy feat with the comparator in place.  As you can see, the comparators return a fixed integer of -1, 1, or 0 which is expected by the Java runtime to define order.
 
 ```
 // New list of employees.
@@ -40,4 +40,4 @@ Collections.sort(employees, comp);
 // employees = { Employee(3), Employee(5), Employee(10) }
 ```
 
-Java will utilize the List classes included sort functionality using the comperator we created above.  Despite having created the List in the order 5,3,10, the list will now be arranged in the order 3,5,10.
+Java will utilize the List classes included sort functionality using the comparator we created above.  Despite having created the List in the order 5,3,10, the list will now be arranged in the order 3,5,10.
