@@ -1,9 +1,9 @@
 #Fragment Activity Communication
 
 ##Communicating through Interfaces
-While interfaces have a wide array of functionality and purpose for many Java applications in multiple platforms and genres, one of the most common uses in Android development is creating communication channels between Fragments and Activities. As the Activity should control the application flow/navigation, operate and execute external threads, and facilitate data transfer between individual components, Fragments should utilize the Actiivty for these tasks. This is done through Java Interfaces.
+While interfaces have a wide array of functionality and purpose for many Java applications in multiple platforms and genres, one of the most common uses in Android development is creating communication channels between Fragments and Activities. As the Activity should control the application flow/navigation, operate and execute external threads, and facilitate data transfer between individual components, Fragments should utilize the Activity for these tasks. This is done through Java Interfaces.
 
-As Fragments are often used for user-facing components, they typically have their own UI. Behaviors such as click listeners, item selectors, and other UI components are thus handled directly within the Fragment. When these interactions need to communicate with other parts of the application, however, an Interface with the main activity allows the Fragment to communicate with other areas of the application. In order to faciliate this, the Fragment defines the required Interface and the Activity implements the interface. This Interface is often referred to as a Listener, as it enables the Activity to "listen" for events from within the Fragment.
+As Fragments are often used for user-facing components, they typically have their own UI. Behaviors such as click listeners, item selectors, and other UI components are thus handled directly within the Fragment. When these interactions need to communicate with other parts of the application, however, an Interface with the main activity allows the Fragment to communicate with other areas of the application. In order to facilitate this, the Fragment defines the required Interface and the Activity implements the interface. This Interface is often referred to as a Listener, as it enables the Activity to "listen" for events from within the Fragment.
 
 For example, a Fragment could contain a UI that allows the user to search for information from a remote API. The Fragment itself would present the user the controls to enter or select the search terms, and then execute the search. Upon the user electing to execute the search, the Fragment would then inform the Activity that a search needs to be performed. The Activity would spin up a thread, such as an AsyncTask, and perform the search. Once the Activity received the data from the API, the Activity would then be able to pass the data to a display fragment, to display the results. The code for this would look something like:
 
@@ -46,12 +46,12 @@ It should be noted that in the above example, there is some logic established in
 ##Communicating Through Bundles
 Similar to Activities, in the Fragment lifecycle, the Fragment will go through a series of methods while being attached to the Activity and eventually displayed on the UI thread of the Activity. The onActivityCreated() method provides the opportunity to access and react to data stored in the savedInstanceState Bundle. This is particularly useful for loading default data or restoring data that was loaded into the Fragment previously. Two methods are primarily utilized to store data within the Fragment:
 
-* **getArguments()** - Accesses Fragment Bundle to retreive stored data.
+* **getArguments()** - Accesses Fragment Bundle to retrieve stored data.
 * **setArguments()** - Stores a Bundle for access.
 
 To use setArguments(), you must first define a Bundle to be saved. Remember, a Bundle acts as a key:value store, so you must store data using put() methods such as putInt(key, value). Retrieving data from these Bundles, similarly, uses a get() method such as getAttributes().getInt(key).
 
-Take, for example, the need to relaod text into a TextView upon the Activity being recreated due to an orientation change. First, the Fragment would need to store the text currently being displayed into a Bundle. This is first done on Fragment creation:
+Take, for example, the need to reload text into a TextView upon the Activity being recreated due to an orientation change. First, the Fragment would need to store the text currently being displayed into a Bundle. This is first done on Fragment creation:
 
 ```
 public static DisplayFragment newInstance(String text) {
