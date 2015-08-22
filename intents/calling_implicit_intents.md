@@ -13,7 +13,7 @@ sendIntent.setType("text/plain");
 startActivity(Intent.createChooser(sendIntent, "Share data with..."));
 ```
 	
-You might've noticed that after we set our action, text, and type, we started a chooser using Intent.createChooser(). A chooser will allow the user to decide which app handles the intent that you're trying to send. If you're attempting to launch an ACTION_SEND intent, the system will populate the chooser with all activities that can handle an ACTION_SEND intent with your type of data. If only one app exists that can open this data, that app will open without prompting the user first.
+You might have noticed that after we set our action, text, and type, we started a chooser using Intent.createChooser(). A chooser will allow the user to decide which app handles the intent that you're trying to send. If you're attempting to launch an ACTION_SEND intent, the system will populate the chooser with all activities that can handle an ACTION_SEND intent with your type of data. If only one app exists that can open this data, that app will open without prompting the user first.
 
 ![](implicit_send.png)
 
