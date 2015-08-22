@@ -2,7 +2,7 @@
 In Android, Resources are accessible content stored within the application. Many forms of content can be stored here, from strings and numbers, to images and colors, and even layouts and animations. The Android platform utilizes a single common resources directory /res for developers to store content which will be accessed throughout the application. Proper utilization of the resources directory allows the platform to assist with a variety of advanced functions such as content localization, graphics display at various resolutions, and even supporting orientation changes during use.
 
 ##Structure
-As the resources directory holds many types of content, knowing and utilizing the appropriate structure and conventions will allow a developer to take full advantage of the platform. When using Android Studio, creating a new Android project will automatically create a resource folder with a few subdirectories already in place. The most common resource directories are as follows:
+As the resources directory holds many types of content, knowing and utilizing the appropriate structure and conventions will allow a developer to take full advantage of the platform. When using Android Studio, creating a new Android project will automatically create a resource folder with a few sub-directories already in place. The most common resource directories are as follows:
 * ***/drawable-density*** - store image resources for the associated screen pixel density.
 * ***layout*** - store Android XML layout files to establish the views and UI of your application.
 * ***menu*** - build system menus for advanced controls in your application views.
