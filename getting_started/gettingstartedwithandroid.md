@@ -1,6 +1,6 @@
 #Getting Started with Android
 
-Android development is still young, but recent announcements by Google have started to solidfy the standard development process and general workflow for Android development.  It is highly recommended that you utilize Android Studio as your IDE for Android development.
+Android development is still young, but recent announcements by Google have started to solidify the standard development process and general workflow for Android development.  It is highly recommended that you utilize Android Studio as your IDE for Android development.
 
 ##Android Studio
 Android Studio is a custom IDE originally built off the open source IntelliJ platform. Google has taken the platform and customized it for Android Development and is currently dedicating its efforts into the Android Studio environment as the development platform of choice for Android.
