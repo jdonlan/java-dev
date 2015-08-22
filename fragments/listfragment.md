@@ -15,7 +15,7 @@ public class PresidentListFragment extends ListFragment {
 }
 ```
 
-The ListFragment class contains some special functionality in terms of creating a view for the fragment. With a list fragment, you don't need to create your own layout file and you don't need to override onCreateView(). Instead, the default implementation of onCreateView() will load a built-in resource that displays a list when you have data and a loading indicator while that data is loading. This makes it really easy to create a simple list, plus you get the added benefit of a loading indicator while you load data into the list. Instead of overriding onCreateView(), we'll ignore that method entirely and jump right to onActivityCreate().
+The ListFragment class contains some special functionality in terms of creating a view for the fragment. With a list fragment, you don't need to create your own layout file and you don't need to override onCreateView(). Instead, the default implementation of onCreateView() will load a built-in resource that displays a list when you have data and a loading indicator while that data is loading. This makes it really easy to create a simple list, plus you get the added benefit of a loading indicator while you load data into the list. Instead of overriding onCreateView(), we'll ignore that method entirely and jump right to onActivityCreated().
 
 In the onActivityCreated() method, we'll do all of our list setup. Use this method to load up your data and create a new adapter to hold that data. In our case, we'll load in an array of strings from our resource files and create a new ArrayAdapter to hold those strings. Once you have an adapter, you can set that adapter to the list in the fragment using the setListAdapter() method of the ListFragment class.
 
