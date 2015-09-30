@@ -78,7 +78,7 @@ try {
 	FileInputStream fin = openFileInput("test.dat");
 	
 	// Wrapping our stream
-	ObjectInputStream oin = new ObjectInputStream(oin);
+	ObjectInputStream oin = new ObjectInputStream(fin);
 	
 	// Reading in our object
 	Employee emp = (Employee)oin.readObject();
