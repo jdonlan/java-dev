@@ -47,3 +47,13 @@ player.setOnPreparedListener(new OnPreparedListener() {
 That's it for getting media playing. However, if this is being done in an activity, then you'll need to make sure you're managing these states in line with the activity life-cycle methods. If your activity is paused, make sure your music is paused. If your activity resumes, check if the music was playing and resume if necessary. When your activity stops, stop the player. Then, when your activity is destroyed, release your player to clean up any lingering resources. Keep in mind that if your player is stopped, you'll have to prepare the player again before you can play music. Once prepared, the MediaPlayer will stay in the prepared state until the player is either stopped or released, unless an error is thrown at anytime during playback at which point stop() is called for you.
 
 With your media playing in the activity, you have a pretty major limitation. When your activity stops, the music stops with it. However, there will be times where you'll want your music to continue playing even when the app is closed. To do this, you'll need to handle your audio playing in a service. Services have very similar life-cycle callbacks as activities do, with some differences in naming. When moving your audio playing to a service, keep in mind which methods translate into which states, and which states can transition to other states. Then, you can just map the MediaPlayer states to the service life-cycle callbacks.
+
+###Resources
+[Android Developers: Media Playback (helpful)](http://developer.android.com/guide/topics/media/mediaplayer.html)<br/>
+Android developer guide that walks through the process of playing audio using the MediaPlayer class. Covers topics such as player state, background audio, and handling audio focus changes.
+
+[Android Developers: MediaPlayer (helpful)](http://developer.android.com/reference/android/media/MediaPlayer.html)<br/>
+Android developer documentation for the MediaPlayer class. Covers the different player states, which states can transition to other states, and how to handle errors in playback. This documentation also serves as a helpful reference when looking up MediaPlayer methods and functionality.
+
+[Android Developers: Managing Audio Focus (helpful)](http://developer.android.com/training/managing-audio/audio-focus.html)<br/>
+Your app will likely not be the only app capable of playing audio on the device. In case other apps need to play audio, you need to make sure that your app properly handles pausing or ducking depending on the audio focus state. This is really only required if you're making a music player so it's included here as an additional resource.
