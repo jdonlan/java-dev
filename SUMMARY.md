@@ -84,4 +84,5 @@
    * [Location Services](device/location_services.md)
    * [Sensors](device/sensors.md)
    * [Maps](device/maps.md)
+   * Audio Playback
 
