@@ -22,7 +22,7 @@ Comparator<Employee> comp = new Comparator<Employee>() {
 };
 ```
 
-Comparing two employees by their ID becomes an easy feat with the comparator in place.  As you can see, the comparators return a fixed integer of -1, 1, or 0 which is expected by the Java runtime to define order.
+Comparing two employees by their ID becomes an easy feat with the comparator in place.  As you can see, the comparators return a fixed integer of -1, 1, or 0 which is expected by the Java run-time to define order.
 
 ```
 // New list of employees.
