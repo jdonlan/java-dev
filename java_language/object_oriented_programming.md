@@ -17,7 +17,7 @@ Inheritance is the final piece of the puzzle, and perhaps the most complex. Refe
 In this example, the animal represents what is known as a super class.  The cat would represent what is known as a subclass.  In essence, the subclass "extends" the super class, adding or modifying the behaviors and traits of the extended class in the process.
 
 ###Subclasses
-Subclasses share a type with the extended class. In Android, our MainActivity extends Activity and thus our MainActivity is an Activity. When you extend a class, you also inherit all of the member variables and methods from the extended class (super). This enables subclasses to call methods and access member variables of the super class without the need of creating or initializing them within the subclass itself. 
+Subclasses share a type with the extended class. In Android, our MainActivity extends Activity and thus our MainActivity is an Activity. When you extend a class, you also inherit all the member variables and methods from the extended class (super). This enables subclasses to call methods and access member variables of the super class without the need of creating or initializing them within the subclass itself. 
 
 It should be noted that the inverse is not true. Anything defined in the subclass is only accessible to that class. For example, if MainActivity extends Activity, it can access the methods from Activity while Activity cannot access the methods of MainActivity.
 
