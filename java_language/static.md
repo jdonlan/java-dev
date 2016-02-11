@@ -1,8 +1,8 @@
 #Static
-Like Final, the static keyword has a few intricacies in the Java language.  This section will cover proper usage of static and considerations that should be factored when using it.
+Like Final, the static keyword has more than one use in the Java language.  This section will cover proper usage of static and things to consider when using the keyword.
 
 ##Variables and Methods
-The most common use for the static keyword is to define static variables and methods. When calling a method or accessing an instance variable, you need to first have an instance of the class that contains the method or variable. You would obtain an instance of the class by creating a new object, then you would call the method or access the variable that you wanted access. By adding the static keyword to your variable or method definition, you no longer need an instance of the containing class. Instead, you would access those static variables and methods using the class name. An example of this can be found below.
+The most common use for the static keyword is to define static variables and methods. When calling a method or accessing an instance variable, you need to first have an instance of the class that contains the method or variable. You would obtain an instance of the class by creating a new object, then you would call the method or access the variable that you wanted access. By adding the static keyword to your variable or method definition, you no longer need an instance of the containing class. Instead, you would access those static variables and methods using the class name. Below is an example of this.
 
 ###Non Static Example
 
@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
 	}
 }
 ```
-Notice how an instance of the class must be used to access the variables and methods.
+Notice how variable and method access uses an instance of the class.
 
 ###Static Example
 
@@ -62,7 +62,7 @@ public class FileUtil {
 }
 ```
 
-Notice the variable name has been changed to all capital letters. It is a common Java coding convention to name static variables with all capital letters. This isn't required, but it's good practice.
+Notice that the variable name has changed to all capital letters. It is a common Java coding convention to name static variables with all capital letters. This isn't required, but it's good practice.
 
 ```
 package com.company.android.staticexample;
@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-Notice how instead of creating a new FileUtil object, the variable and method are called directly on the class definition using the class name.
+Notice how, instead of creating a new FileUtil object, the variable accesses and method calls happen directly on the class definition and use the class name.
 
 ##Usage and Considerations
 
@@ -137,7 +137,7 @@ two.setLastName("Thompson");
 two.setId(2);
 ```
 
-This code works out for a while, but sometime down the road we decide we don't want separate methods for setting the first and last name. We instead want one method for setting the full name. Now we'd have to go back and edit our Employee object creation code to just use one method. In our example this is really easy to do, but if we had created hundreds of employees then we'd be in trouble. This is where a factory can help. Consider the below Employee class using a factory method:
+This code works out for a while, but sometime down the road we might decide that we don't want separate methods for setting the first and last name. We instead want one method for setting the full name. Now we'd have to go back and edit our Employee object creation code to just use one method. In our example this is easy to do, but if we had created hundreds of employees then we'd be in trouble. This is where a factory can help. Consider the below Employee class using a factory method:
 
 ```
 public class Employee {
