@@ -9,7 +9,7 @@ Views are the most basic building blocks of any UI, and Android contains several
 
 ##Layouts
 
-While a view is a single control that's shown on the screen, a layout, or view group as they're more formally known, is used to contain and position groups of views in the UI. Different layouts are used to position views in different ways and can be nested inside of each other to accomplish more complex interfaces. 
+While a view is a single control that's shown on the screen, a layout, or view group as they're more formally known, contains and positions groups of views in the UI. Different layouts position views in different ways and can nest inside of each other to accomplish more complex interfaces. 
 
 ####Resources
 http://developer.android.com/guide/topics/ui/declaring-layout.html
