@@ -44,7 +44,7 @@
    * [Connecting to APIs](networking/connecting_to_apis.md)
    * [URLConnection](networking/urlconnection.md)
    * [Network Status](networking/network_status.md)
-   * [Web Based Applications](networking/webview_and_javascript_intefaces.md)
+   * [Web Based Applications](networking/webview_and_javascript_interfaces.md)
 * [Storage and I/O](storage/storage_and_io.md)
    * [Internal Storage](storage/internal_storage.md)
    * [External Storage](storage/external_storage.md)
