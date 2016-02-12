@@ -45,3 +45,35 @@ wv.loadUrl("file:///android_asset/index.html");
 Assuming all other code is correct and our permissions are setup properly, if you run this code in an app, the WebView doesn't load any data. Instead, the native browser app on the device will open and load the given URL.  This happens because the WebView doesn't know how to handle loading links on its own. It needs a web client in order to handle this functionality.
 
 ### WebViewClient
+
+In order for a WebView to be able to navigate to and between web pages, it needs to have a WebViewClient set.  The WebViewClient class allows a WebView to handle page loading events, block pages from loading, or redirect navigation events.  If your app isn't going to handle any custom navigation events, such as utilizing the native activity stack for navigation, then it's best to use a default WebViewClient object. However, if you need to handle custom events or redirect page loads, you must subclass the WebViewClient class.
+
+##### WebViewClient Methods
+
+* onPageStarted - Notifies the app that a page has started loading. The URL and favicon of the page is given for use in a custom address bar or ActionBar icon customization.
+* onPageFinished - Notifies the app that a page has finished loading. URL of the page is given here.
+* shouldOverrideUrlLoading - Gives the app an opportunity to take control before a URL is loaded by the WebView.  Custom navigation logic would typically stem from interrupting page loads in this method. Returns true if the app is taking over or false if the WebView should load the URL as normal.
+
+```
+WebView wv = (WebView)findViewById(R.id.webview);
+
+// Set a default client for normal browsing.
+wv.setWebViewClient(new WebViewClient());
+
+// Creating a custom client for custom nav events.
+public class MyClient extends WebViewClient {
+    
+    @Override
+    public boolean shouldOverrideUrlLoading(WebView view, String url) {
+        if(url.contains("www.example.com")) {
+            // Do custom navigation here.
+            return true;
+        }
+        return false;
+    }
+}
+
+// Setting our custom client for custom nav handling.
+wv.setWebViewClient(new MyClient());
+```
+
