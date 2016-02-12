@@ -77,3 +77,45 @@ public class MyClient extends WebViewClient {
 wv.setWebViewClient(new MyClient());
 ```
 
+### JavaScript Interfaces
+
+In addition to simple link overriding, Android applications can also access and interface with JavaScript functionality using an interface object.  These same interface objects also allow JavaScript code to call methods that are written in native Java.
+
+A JavaScript interface object is actually just a simple class or POJO (plain old Java object).  The class shouldn't explicitly extend any other class, but otherwise it's a normal class.  Inside of the class you would include any functionality that you want to expose to JavaScript.  Each method you want to expose should then be labeled with the `@JavaScriptInterface` annotation.
+
+Instances of the interface object are attached to the WebView and given a string name.  The string name given to the object becomes the reference name in JavaScript. So if you had an interface object with a method called showToast() and you attached it to the WebView with the name "Android", your Java code would look like this:
+
+```
+// Define our JSInterface object with a method to show a toast.
+public class WebInterface {
+    @JavaScriptInterface
+    public void showToast(String text) {
+        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+    }
+}
+
+// Attach our JSInterface to the WebView.
+WebView wv = (WebView)findViewById(R.id.webview);
+wv.getSettings().setJavaScriptEnabled(true);
+// Must assign a name to the JSInterface to reference it in JavaScript.
+wv.addJavaScriptInterface(new WebInterface(), "Android");
+```
+
+Then in JavaScript, you'd call the method like so:
+
+```
+<!-- Define a JavaScript function for our form. -->
+<script>
+parseForm = function(event) {
+    // Call our interface function to toast with the entered name.
+    Android.showToast(document.forms["myForm"]["first_name"].value);
+};
+</script>
+
+
+<!-- Form that uses our JavaScript function. -->
+<form name="myForm" onsubmit="return parseForm()" >
+    <input type="text" name="first_name" />
+    <input type="submit" name="Submit" value="Submit" />
+</form>
+```
