@@ -112,7 +112,6 @@ parseForm = function(event) {
 };
 </script>
 
-
 <!-- Form that uses our JavaScript function. -->
 <form name="myForm" onsubmit="return parseForm()" >
     <input type="text" name="first_name" />
