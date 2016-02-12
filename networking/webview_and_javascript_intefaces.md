@@ -118,3 +118,16 @@ parseForm = function(event) {
     <input type="submit" name="Submit" value="Submit" />
 </form>
 ```
+
+##### JavaScript Interface Limitations
+
+Interfacing with JavaScript from Java isn't too bad in terms of setup, but it gets more complicated if you need to pass around complex data.  While JavaScript can handle primitive or simple Android types such as String, int, and boolean, it can't handle Java objects as parameters or return types.  However, JavaScript **does** understand how to interact with JSON, but it does so as a string.  So if you need to pass complex objects around, using JSON to represent the object is your best bet.
+
+The other major warning has to do with how the interface executes methods on different threads.  While most operations commonly execute place on the main thread, interface functions are not guaranteed to be executed on the main thread in all cases.  If you need to alter the UI based on data returned from an interface function, be sure to post it to the main thread using a runnable or other solution.
+
+### References
+
+* [Android Developers: WebView Class](http://developer.android.com/reference/android/webkit/WebView.html)
+* [Android Developers: Custom URL Handling](http://developer.android.com/guide/webapps/migrating.html#URLs)
+* [Android Developers: Building Web Apps in WebView](http://developer.android.com/guide/webapps/webview.html)
+* [Android Developers: Debugging Web Apps](http://developer.android.com/guide/webapps/debugging.html)
