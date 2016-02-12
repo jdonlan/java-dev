@@ -12,11 +12,10 @@ There's a reputation in mobile that if you don't have an app, you're not prepare
 Android is great.  The SDK contains components for almost everything you'd want to do in an app and there are a great deal of libraries to fill in the gaps.  Still, there are some things Android and Java don't do well.  Take a look at the following example:
 
 | ![GraphView](GraphView.png) | ![d3js](d3js.png) |
-| -- | -- |
-| <center> [GraphView](http://www.android-graphview.org/) | <center>[d3js](https://d3js.org/) |
+| :--: | :--: |
+| [GraphView](http://www.android-graphview.org/) | [d3js](https://d3js.org/) |
 
 On the left is the open source GraphView library. While the library provides a native component that you can drop into your layout, it's limited in features.  On the right side is the open source D3 JavaScript library. D3 takes a bit longer to setup since it's in JavaScript and requires a WebView, but it provides far more functionality and customization than any available Java or Android library.
-
 
 ## Building Web Apps
 
@@ -28,17 +27,21 @@ In order to show HTML and JavaScript files locally, the files need to be added i
 
 Consider the following example code:
 
-    // Grab the WebView like any other view.
-    WebView wv = (WebView)findViewById(R.id.webview);
+```
+// Grab the WebView like any other view.
+WebView wv = (WebView)findViewById(R.id.webview);
     
-    // JavaScript must be enabled in order to execute.
-    WebSettings ws = wv.getSettings();
-    ws.setJavaScriptEnabled(true);
+// JavaScript must be enabled in order to execute.
+WebSettings ws = wv.getSettings();
+ws.setJavaScriptEnabled(true);
     
-    // Load a URL in the WebView.
-    wv.loadUrl("http://www.google.com");
+// Load a URL in the WebView.
+wv.loadUrl("http://www.google.com");
     
-    // Load a file from the assets folder.
-    wv.loadUrl("file:///android_asset/index.html");
+// Load a file from the assets folder.
+wv.loadUrl("file:///android_asset/index.html");
+```
     
 Assuming all other code is correct and our permissions are setup properly, if you run this code in an app, the WebView doesn't load any data. Instead, the native browser app on the device will open and load the given URL.  This happens because the WebView doesn't know how to handle loading links on its own. It needs a web client in order to handle this functionality.
+
+### WebViewClient
