@@ -1,2 +1,2 @@
 #Storage and I/O
-When you want to store data to an Android device, there are numerous locations to do so. Where to store your data depends largely on the type of data you're storing and what kind of access you want other apps having to your data. In this section we'll talk about the different locations in which data can be stored on an Android device and what type of data should be stored in each location.
+When you want to store data to an Android device, there are a handful of locations to do so. Where to store your data depends in large part on the type of data you're storing and which apps need access to it. In this section, we'll talk about the different data storage locations on an Android device and what type of data gets stored in each location.
