@@ -1,5 +1,5 @@
 #Device Features and APIs
 
-As a developer, there will be things that you implement on a fairly regular basis. However, there will also be some things that you hardly ever do. This chapter is meant to hit on a few of those rarely used classes and APIs so that they're not a complete mystery when you're eventually asked to use them.
+As a developer, there will be things that you implement on a fairly regular basis. However, there will also be some things that you hardly ever do. This chapter will hit on some of those lesser used classes and APIs so that they're not a complete mystery when you're asked to use them someday.
 
 In addition to those rarely used features, we'll also be covering simple image capturing and location services. These, while still not present in every app, are a bit more common than say, an Android Daydream. Thousands of images are shared on a daily basis (millions even) and it's an interaction that users like making, so you should be able to do that in your apps. Additionally, more and more apps are becoming location aware. Location used to only be important to apps like Google Maps and Foursquare, but now it's used by thousands of apps that want aim to be more immersive, by being more local.
