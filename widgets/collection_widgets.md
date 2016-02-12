@@ -185,6 +185,7 @@ public class CollectionWidgetProvider extends AppWidgetProvider {
 			if(article != null) {
 				// Handle the click here.
 				// Maybe start a details activity?
+				// Maybe consider using an Activity PendingIntent instead of a Broadcast?
 			}
 		}
 		
