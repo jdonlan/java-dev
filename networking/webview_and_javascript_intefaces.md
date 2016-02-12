@@ -5,7 +5,7 @@ The majority of this book is about native Android development, so why switch to 
 
 ### Quick "Native" Apps
 
-There's a reputation in mobile that if you don't have an app, you're not prepared for the mobile space. 
+There's a reputation in mobile that if you don't have an app, you're not prepared for the mobile space. Using a WebView and the native activity stack for navigation, web apps enable mobile sites to have a quick mobile app in the store.  This practice isn't allowed in iOS, but Google Play still allows it for published applications.
 
 ### JavaScript Libraries
 
@@ -15,5 +15,3 @@ Android is great.  The SDK contains components for almost everything you'd want 
 | -- | -- |
 | <center> [GraphView](http://www.android-graphview.org/) | <center>[d3js](https://d3js.org/) |
 
-
- 
