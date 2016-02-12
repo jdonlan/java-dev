@@ -18,5 +18,5 @@ Android is great.  The SDK contains components for almost everything you'd want 
 On the left is the open source GraphView library. While the library provides a native component that you can drop into your layout, it's limited in features.  On the right side is the open source D3 JavaScript library. D3 takes a bit longer to setup since it's in JavaScript and requires a WebView, but it provides far more functionality and customization than any available Java or Android library.
 
 
-## Implementation Details
+## Building Web Apps
 
