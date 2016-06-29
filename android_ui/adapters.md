@@ -111,7 +111,7 @@ public class ExampleAdapter extends BaseAdapter {
 }
 ```
 
-##Adapater Types
+##Adapter Types
 In addition to being able to create your own adapter using the BaseAdapter class, the Android SDK includes a few pre-built adapters that can be used for a variety of different things. There are adapters that are used for simple text content as well as adapters that communicate with database resources. We'll cover two of the commonly used pre-built adapters.
 
 ###ArrayAdapter&lt;T&gt;
